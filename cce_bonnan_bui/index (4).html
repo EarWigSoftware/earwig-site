@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An Bonnán Buí CCÉ — Comhaltas Ceoltóirí Éireann, Crossmaglen. Traditional Irish music, song and dance classes every Tuesday in South Armagh.">
+<title>An Bonnán Buí CCÉ | Crossmaglen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --butter: #F5E9A0;
+    --butter-mid: #EDD96A;
+    --butter-dark: #C4A830;
+    --butter-pale: #FDFBEC;
+    --butter-bg: #FAFAF2;
+    --ink: #1A1600;
+    --ink-mid: #3D3400;
+    --ink-light: #7A6E3A;
+    --white: #FFFFFF;
+    --border: #E8DFA0;
+    --border-mid: #D4C660;
+    --warm-white: #FEFEFB;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--butter-bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--warm-white);
+    border-bottom: 2px solid var(--butter);
+    padding: 0 6vw;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-logo-mark {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {}
+  .nav-logo-irish {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.1;
+    display: block;
+  }
+
+  .nav-logo-sub {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    color: var(--ink-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--butter) !important;
+    padding: 9px 22px !important;
+    border-radius: 3px;
+    font-weight: 500 !important;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--warm-white);
+    border-bottom: 2px solid var(--butter);
+    padding: 20px 6vw 24px;
+    z-index: 99;
+    flex-direction: column;
+  }
+
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 15px; color: var(--ink-mid); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--border); }
+  .mobile-menu a.m-cta { margin-top: 14px; background: var(--ink); color: var(--butter); padding: 13px 20px; border-radius: 3px; text-align: center; font-weight: 500; border: none; }
+
+  /* HERO */
+  .hero {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    padding: 72px 6vw 64px;
+  }
+
+  .hero-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    background: var(--butter);
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-translation {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-light);
+    margin-bottom: 24px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-dark {
+    background: var(--ink);
+    color: var(--butter);
+    padding: 13px 26px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .btn-dark:hover { opacity: 0.8; }
+
+  .btn-outline {
+    border: 1px solid var(--border-mid);
+    color: var(--ink-mid);
+    padding: 13px 26px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+  .hero-logo-display {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  /* QUICK INFO BAR */
+  .info-bar {
+    background: var(--butter);
+    border-bottom: 1px solid var(--border-mid);
+    padding: 16px 6vw;
+  }
+
+  .info-bar-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .info-label {
+    font-weight: 500;
+  }
+
+  .info-val {
+    color: var(--ink-mid);
+  }
+
+  /* SECTIONS */
+  .page-section {
+    padding: 80px 6vw;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+  }
+
+  /* ABOUT */
+  .about-wrap {
+    background: var(--warm-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.9;
+    margin-bottom: 18px;
+    font-weight: 300;
+  }
+
+  .about-text p strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .about-pull {
+    border-left: 3px solid var(--butter-mid);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.6;
+    background: var(--butter-pale);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .about-sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+  .sidebar-box {
+    background: var(--butter-pale);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+  }
+
+  .sidebar-box-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+  }
+
+  .sidebar-box p {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+
+  .sidebar-box a {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-mid);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .sidebar-box a:hover { border-color: var(--ink); }
+
+  /* CLASSES */
+  .classes-wrap {
+    background: var(--ink);
+  }
+
+  .classes-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 80px 6vw;
+  }
+
+  .classes-wrap .section-label { color: rgba(245,233,160,0.45); }
+  .classes-wrap .section-heading { color: var(--butter-pale); margin-bottom: 16px; }
+
+  .classes-intro {
+    font-size: 15px;
+    color: rgba(245,233,160,0.6);
+    font-weight: 300;
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .class-card {
+    background: rgba(245,233,160,0.06);
+    border: 1px solid rgba(245,233,160,0.1);
+    border-radius: 4px;
+    padding: 24px 22px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .class-card:hover {
+    background: rgba(245,233,160,0.1);
+    border-color: rgba(245,233,160,0.2);
+  }
+
+  .class-emoji { font-size: 24px; margin-bottom: 14px; }
+
+  .class-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--butter-pale);
+    margin-bottom: 6px;
+  }
+
+  .class-note {
+    font-size: 12px;
+    color: rgba(245,233,160,0.45);
+    line-height: 1.6;
+  }
+
+  .classes-fleadh {
+    background: rgba(245,233,160,0.07);
+    border: 1px solid rgba(245,233,160,0.12);
+    border-radius: 4px;
+    padding: 28px 32px;
+  }
+
+  .fleadh-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--butter);
+    margin-bottom: 12px;
+  }
+
+  .fleadh-body {
+    font-size: 14px;
+    color: rgba(245,233,160,0.6);
+    line-height: 1.75;
+    font-weight: 300;
+    max-width: 680px;
+  }
+
+  /* EVENTS */
+  .events-wrap {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .events-list { display: flex; flex-direction: column; gap: 1px; }
+
+  .event-row {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 28px;
+    align-items: center;
+    padding: 22px 28px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: background 0.15s;
+  }
+
+  .event-row:hover { background: var(--butter-pale); }
+
+  .event-when {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--butter-dark);
+    line-height: 1.3;
+  }
+
+  .event-freq {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 2px;
+  }
+
+  .event-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .event-detail {
+    font-size: 13px;
+    color: var(--ink-light);
+    font-weight: 300;
+  }
+
+  .event-tag {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border: 1px solid var(--border-mid);
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* CONTACT */
+  .contact-wrap {
+    background: var(--butter);
+    border-top: 1px solid var(--border-mid);
+  }
+
+  .contact-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 80px 6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-wrap .section-label { color: var(--ink-light); }
+
+  .contact-wrap h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .contact-wrap p {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(26,22,0,0.12);
+  }
+
+  .contact-detail:last-child { border-bottom: none; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(26,22,0,0.08);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 3px;
+  }
+
+  .contact-val {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .contact-val a { color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(26,22,0,0.25); }
+
+  .contact-logo-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(26,22,0,0.04);
+    border-radius: 6px;
+    border: 1px solid rgba(26,22,0,0.08);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 40px 6vw;
+  }
+
+  .footer-top {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(245,233,160,0.12);
+    margin-bottom: 24px;
+  }
+
+  .footer-logo-text .fi { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--butter); display: block; }
+  .footer-logo-text .fe { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,233,160,0.35); display: block; }
+
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+  .footer-links a { font-size: 12px; color: rgba(245,233,160,0.3); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
+  .footer-links a:hover { color: rgba(245,233,160,0.7); }
+
+  .footer-bottom {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy { font-size: 12px; color: rgba(245,233,160,0.2); }
+  .footer-built { font-size: 12px; color: rgba(245,233,160,0.2); }
+  .footer-built a { color: rgba(245,233,160,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-built a:hover { color: rgba(245,233,160,0.75); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-logo-display { width: 180px; margin: 0 auto; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .event-row { grid-template-columns: 100px 1fr; }
+    .event-tag { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Circular border -->
+      <circle cx="50" cy="45" r="40" fill="none" stroke="#1A1600" stroke-width="2.5"/>
+      <!-- Inner arc suggestion -->
+      <circle cx="50" cy="45" r="34" fill="none" stroke="#1A1600" stroke-width="1"/>
+      <!-- Body of bittern -->
+      <ellipse cx="50" cy="52" rx="14" ry="16" fill="#1A1600"/>
+      <!-- Head -->
+      <circle cx="50" cy="34" r="9" fill="#1A1600"/>
+      <!-- Beak -->
+      <line x1="55" y1="33" x2="74" y2="31" stroke="#1A1600" stroke-width="3" stroke-linecap="round"/>
+      <!-- Eye -->
+      <circle cx="53" cy="31" r="2.5" fill="white"/>
+      <circle cx="53.5" cy="31" r="1.2" fill="#1A1600"/>
+      <!-- Wing highlight -->
+      <ellipse cx="46" cy="46" rx="6" ry="8" fill="#F5E9A0" opacity="0.7"/>
+      <!-- Left leg -->
+      <line x1="44" y1="67" x2="40" y2="78" stroke="#1A1600" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="40" y1="78" x2="36" y2="80" stroke="#1A1600" stroke-width="2" stroke-linecap="round"/>
+      <!-- Right leg -->
+      <line x1="56" y1="67" x2="58" y2="78" stroke="#1A1600" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="58" y1="78" x2="62" y2="80" stroke="#1A1600" stroke-width="2" stroke-linecap="round"/>
+      <!-- Music notes -->
+      <text x="28" y="42" font-size="8" fill="#1A1600">♪</text>
+      <text x="64" y="46" font-size="8" fill="#1A1600">♫</text>
+      <!-- Banner base -->
+      <rect x="8" y="82" width="84" height="16" fill="none" stroke="#1A1600" stroke-width="2"/>
+      <text x="50" y="93" font-size="7.5" fill="#1A1600" text-anchor="middle" font-weight="bold" font-family="serif">an bonnán buí</text>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-irish">An Bonnán Buí CCÉ</span>
+      <span class="nav-logo-sub">Crossmaglen, Co. Armagh</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#events">What's On</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Get involved</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#classes" class="mobile-link">Classes</a>
+  <a href="#events" class="mobile-link">What's On</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="#contact" class="m-cta">Get involved</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">Comhaltas Ceoltóirí Éireann, South Armagh</span>
+      <h1>An Bonnán Buí CCÉ</h1>
+      <p class="hero-translation">"The Yellow Bittern" — Crossmaglen, Co. Armagh</p>
+      <p class="hero-sub">Keeping the tradition alive in the heart of South Armagh. Traditional Irish music, song and dance classes every Tuesday, open to all ages and all abilities.</p>
+      <div class="hero-actions">
+        <a href="#classes" class="btn-dark">Our classes</a>
+        <a href="#about" class="btn-outline">Our story</a>
+      </div>
+    </div>
+    <div>
+      <!-- Full logo SVG recreation -->
+      <svg class="hero-logo-display" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle -->
+        <circle cx="150" cy="140" r="125" fill="none" stroke="#1A1600" stroke-width="5"/>
+        <!-- Inner circle -->
+        <circle cx="150" cy="140" r="108" fill="none" stroke="#1A1600" stroke-width="2"/>
+        <!-- Butter fill arc background -->
+        <path d="M 60 230 A 125 125 0 1 1 240 230" fill="#F5E9A0" stroke="none"/>
+        <!-- Redraw circles on top -->
+        <circle cx="150" cy="140" r="125" fill="none" stroke="#1A1600" stroke-width="5"/>
+        <circle cx="150" cy="140" r="108" fill="none" stroke="#1A1600" stroke-width="2"/>
+        <!-- Arc text path -->
+        <path id="arcText" d="M 55 140 A 95 95 0 0 1 245 140" fill="none"/>
+        <text font-size="13" fill="#1A1600" font-family="serif" font-weight="bold">
+          <textPath href="#arcText" startOffset="5%">Is é ár neart ár dtart chun foirfeachta</textPath>
+        </text>
+        <!-- Bittern body -->
+        <ellipse cx="148" cy="170" rx="38" ry="44" fill="#1A1600"/>
+        <!-- Bittern head -->
+        <circle cx="152" cy="108" r="26" fill="#1A1600"/>
+        <!-- Beak -->
+        <line x1="168" y1="104" x2="220" y2="98" stroke="#1A1600" stroke-width="7" stroke-linecap="round"/>
+        <!-- Eye -->
+        <circle cx="162" cy="100" r="7" fill="white"/>
+        <circle cx="164" cy="100" r="3.5" fill="#1A1600"/>
+        <!-- Wing/body highlight -->
+        <ellipse cx="138" cy="158" rx="18" ry="26" fill="#F5E9A0" opacity="0.75"/>
+        <ellipse cx="160" cy="150" rx="10" ry="18" fill="#F5E9A0" opacity="0.5"/>
+        <!-- Left arm holding flute -->
+        <line x1="130" y1="155" x2="105" y2="135" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="105" y1="135" x2="95" y2="112" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <!-- Flute -->
+        <rect x="88" y="108" width="5" height="28" rx="2" fill="#1A1600" transform="rotate(-15 88 108)"/>
+        <!-- Right arm -->
+        <line x1="168" y1="155" x2="190" y2="140" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <!-- Left leg -->
+        <line x1="136" y1="212" x2="122" y2="238" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="122" y1="238" x2="106" y2="244" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <!-- Right leg -->
+        <line x1="162" y1="212" x2="170" y2="238" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="170" y1="238" x2="186" y2="244" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <!-- Music notes -->
+        <text x="80" y="148" font-size="18" fill="#1A1600">♪</text>
+        <text x="72" y="125" font-size="14" fill="#1A1600">♫</text>
+        <text x="196" y="144" font-size="16" fill="#1A1600">♪</text>
+        <text x="204" y="162" font-size="13" fill="#1A1600">♫</text>
+        <!-- Banner feet of omega shape -->
+        <path d="M 60 230 L 60 250 L 100 250 L 100 230" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <path d="M 200 230 L 200 250 L 240 250 L 240 230" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <!-- Banner box -->
+        <rect x="42" y="255" width="216" height="52" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <!-- Horizontal lines in banner -->
+        <line x1="52" y1="263" x2="248" y2="263" stroke="#1A1600" stroke-width="1.5"/>
+        <line x1="52" y1="299" x2="248" y2="299" stroke="#1A1600" stroke-width="1.5"/>
+        <!-- c.c.e. text -->
+        <text x="150" y="272" font-size="11" fill="#1A1600" text-anchor="middle" font-family="serif">c.c.e.</text>
+        <!-- Main name text -->
+        <text x="150" y="293" font-size="20" fill="#1A1600" text-anchor="middle" font-family="serif" font-weight="bold">an bonnán buí</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-item"><span class="info-label">Classes:</span><span class="info-val">Every Tuesday evening</span></div>
+    <div class="info-item"><span class="info-label">Location:</span><span class="info-val">Crossmaglen, Co. Armagh</span></div>
+    <div class="info-item"><span class="info-label">Contact:</span><span class="info-val">cceanbonnanbui@gmail.com</span></div>
+    <div class="info-item"><span class="info-label">All ages:</span><span class="info-val">Everyone welcome</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-wrap" id="about">
+  <div class="page-section">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">Our story</p>
+        <h2 class="section-heading">Rooted in the music and culture of South Armagh</h2>
+        <p>An Bonnán Buí CCÉ is the Comhaltas Ceoltóirí Éireann branch based in Crossmaglen, one of seven Comhaltas branches across County Armagh. We are part of an international cultural movement committed to the promotion and preservation of Irish music, song and dance.</p>
+        <p>Our branch takes its name from <strong>An Bonnán Buí</strong>, a celebrated poem in Irish by Cathal Buí Mac Giolla Ghunna, a lament for a yellow bittern that has been translated by some of the finest Irish poets including Seamus Heaney. The name connects us to the deep literary and musical traditions of our language and our land.</p>
+        <p>Over the years our members have competed and succeeded at the highest levels, with All Ireland medal winners at Fleadh Cheoil na hÉireann. We run regular events, sessions and concerts, including as part of the Lúnasa Festival and other community celebrations across South Armagh.</p>
+        <div class="about-pull">A place to learn, to play, to compete, and to keep the tradition alive for the next generation.</div>
+      </div>
+      <div class="about-sidebar">
+        <div class="sidebar-box">
+          <div class="sidebar-box-title">Get in touch</div>
+          <p>To find out about classes, upcoming sessions or to get involved, email us any time.</p>
+          <a href="mailto:cceanbonnanbui@gmail.com">cceanbonnanbui@gmail.com</a>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-box-title">Part of Comhaltas</div>
+          <p>We are proud members of Comhaltas Ceoltóirí Éireann, the international organisation promoting Irish traditional arts worldwide.</p>
+          <a href="https://comhaltas.ie" target="_blank" rel="noopener">comhaltas.ie</a>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-box-title">County Armagh</div>
+          <p>One of seven Comhaltas branches in Armagh. Find all branches at armaghcomhaltas.org</p>
+          <a href="https://armaghcomhaltas.org" target="_blank" rel="noopener">armaghcomhaltas.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CLASSES -->
+<div class="classes-wrap" id="classes">
+  <div class="classes-inner">
+    <p class="section-label">Learn with us</p>
+    <h2 class="section-heading">Classes every Tuesday in Crossmaglen</h2>
+    <p class="classes-intro">We teach a wide range of traditional instruments and disciplines, welcoming beginners through to advanced players. All classes are held on Tuesday evenings. Get in touch to find out times and locations.</p>
+    <div class="classes-grid">
+      <div class="class-card">
+        <div class="class-emoji">🎻</div>
+        <div class="class-name">Fiddle</div>
+        <p class="class-note">The heart of Irish traditional music. Beginners to advanced welcome.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🎵</div>
+        <div class="class-name">Flute</div>
+        <p class="class-note">Traditional Irish wooden flute. A beautiful instrument for all levels.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🎶</div>
+        <div class="class-name">Tin Whistle</div>
+        <p class="class-note">A perfect starting point for younger learners and adult beginners alike.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🪗</div>
+        <div class="class-name">Accordion</div>
+        <p class="class-note">Button and piano accordion taught in the traditional style.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🎸</div>
+        <div class="class-name">Banjo</div>
+        <p class="class-note">Four-string tenor banjo, a staple of Irish sessions and céilí bands.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🎵</div>
+        <div class="class-name">Concertina</div>
+        <p class="class-note">One of Ireland's most distinctive traditional instruments.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🥁</div>
+        <div class="class-name">Bodhrán</div>
+        <p class="class-note">The rhythm of Irish music. Learn to play in the authentic session style.</p>
+      </div>
+      <div class="class-card">
+        <div class="class-emoji">🎤</div>
+        <div class="class-name">Traditional Singing</div>
+        <p class="class-note">Sean-nós and English language song for all levels.</p>
+      </div>
+    </div>
+    <div class="classes-fleadh">
+      <div class="fleadh-title">Céilí Bands and Fleadh Competition</div>
+      <p class="fleadh-body">As well as individual instrument classes, we enter céilí bands and groups into underage competitions at Fleadh Cheoil. This gives our younger members the chance to perform together, build confidence, and represent Crossmaglen at county and provincial level. Our next Fleadh is Fleadh Cheoil 2027 and preparations begin well in advance. If you want your child to be part of it, get in touch early.</p>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<div class="events-wrap" id="events">
+  <div class="page-section">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:40px;">
+      <div>
+        <p class="section-label">What's on</p>
+        <h2 class="section-heading" style="margin-bottom:0">Events and sessions</h2>
+      </div>
+      <a href="mailto:cceanbonnanbui@gmail.com" class="btn-dark" style="font-size:13px; padding:10px 20px;">Email for updates</a>
+    </div>
+    <div class="events-list">
+      <div class="event-row">
+        <div>
+          <div class="event-when">Every Tuesday</div>
+          <div class="event-freq">Weekly</div>
+        </div>
+        <div>
+          <div class="event-name">Music classes</div>
+          <div class="event-detail">All instruments, all ages. Crossmaglen. Contact us for full times and locations.</div>
+        </div>
+        <span class="event-tag">Classes</span>
+      </div>
+      <div class="event-row">
+        <div>
+          <div class="event-when">Regular</div>
+          <div class="event-freq">Sessions</div>
+        </div>
+        <div>
+          <div class="event-name">Traditional singing sessions</div>
+          <div class="event-detail">The Cartwheel Bar, Crossmaglen. Singers and listeners all welcome from near and far.</div>
+        </div>
+        <span class="event-tag">Session</span>
+      </div>
+      <div class="event-row">
+        <div>
+          <div class="event-when">August</div>
+          <div class="event-freq">Annual</div>
+        </div>
+        <div>
+          <div class="event-name">Lúnasa Festival concert</div>
+          <div class="event-detail">An evening of traditional music and song as part of the Lúnasa Festival in Crossmaglen. Free event, booking essential.</div>
+        </div>
+        <span class="event-tag">Concert</span>
+      </div>
+      <div class="event-row">
+        <div>
+          <div class="event-when">2027</div>
+          <div class="event-freq">Fleadh</div>
+        </div>
+        <div>
+          <div class="event-name">Fleadh Cheoil 2027</div>
+          <div class="event-detail">Members competing across instruments, singing, dancing and céilí bands. Preparations underway now.</div>
+        </div>
+        <span class="event-tag">Competition</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label">Get in touch</p>
+      <h2>Come and join us</h2>
+      <p>Whether you want to sign up for a class, bring your child along on a Tuesday, attend a session or just find out more — we would love to hear from you. Everyone is welcome.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val"><a href="mailto:cceanbonnanbui@gmail.com">cceanbonnanbui@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Classes</div>
+          <div class="contact-val">Every Tuesday evening, Crossmaglen</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Crossmaglen, Co. Armagh</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-logo-display">
+      <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" width="220">
+        <circle cx="150" cy="140" r="125" fill="none" stroke="#1A1600" stroke-width="5"/>
+        <circle cx="150" cy="140" r="108" fill="none" stroke="#1A1600" stroke-width="2"/>
+        <path d="M 60 230 A 125 125 0 1 1 240 230" fill="#F5E9A0" stroke="none"/>
+        <circle cx="150" cy="140" r="125" fill="none" stroke="#1A1600" stroke-width="5"/>
+        <circle cx="150" cy="140" r="108" fill="none" stroke="#1A1600" stroke-width="2"/>
+        <path id="arcText2" d="M 55 140 A 95 95 0 0 1 245 140" fill="none"/>
+        <text font-size="13" fill="#1A1600" font-family="serif" font-weight="bold">
+          <textPath href="#arcText2" startOffset="5%">Is é ár neart ár dtart chun foirfeachta</textPath>
+        </text>
+        <ellipse cx="148" cy="170" rx="38" ry="44" fill="#1A1600"/>
+        <circle cx="152" cy="108" r="26" fill="#1A1600"/>
+        <line x1="168" y1="104" x2="220" y2="98" stroke="#1A1600" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="162" cy="100" r="7" fill="white"/>
+        <circle cx="164" cy="100" r="3.5" fill="#1A1600"/>
+        <ellipse cx="138" cy="158" rx="18" ry="26" fill="#F5E9A0" opacity="0.75"/>
+        <ellipse cx="160" cy="150" rx="10" ry="18" fill="#F5E9A0" opacity="0.5"/>
+        <line x1="130" y1="155" x2="105" y2="135" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="105" y1="135" x2="95" y2="112" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <rect x="88" y="108" width="5" height="28" rx="2" fill="#1A1600" transform="rotate(-15 88 108)"/>
+        <line x1="168" y1="155" x2="190" y2="140" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="136" y1="212" x2="122" y2="238" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="122" y1="238" x2="106" y2="244" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <line x1="162" y1="212" x2="170" y2="238" stroke="#1A1600" stroke-width="6" stroke-linecap="round"/>
+        <line x1="170" y1="238" x2="186" y2="244" stroke="#1A1600" stroke-width="4" stroke-linecap="round"/>
+        <text x="80" y="148" font-size="18" fill="#1A1600">♪</text>
+        <text x="72" y="125" font-size="14" fill="#1A1600">♫</text>
+        <text x="196" y="144" font-size="16" fill="#1A1600">♪</text>
+        <text x="204" y="162" font-size="13" fill="#1A1600">♫</text>
+        <path d="M 60 230 L 60 250 L 100 250 L 100 230" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <path d="M 200 230 L 200 250 L 240 250 L 240 230" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <rect x="42" y="255" width="216" height="52" fill="#F5E9A0" stroke="#1A1600" stroke-width="3"/>
+        <line x1="52" y1="263" x2="248" y2="263" stroke="#1A1600" stroke-width="1.5"/>
+        <line x1="52" y1="299" x2="248" y2="299" stroke="#1A1600" stroke-width="1.5"/>
+        <text x="150" y="272" font-size="11" fill="#1A1600" text-anchor="middle" font-family="serif">c.c.e.</text>
+        <text x="150" y="293" font-size="20" fill="#1A1600" text-anchor="middle" font-family="serif" font-weight="bold">an bonnán buí</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-text">
+      <span class="fi">An Bonnán Buí CCÉ</span>
+      <span class="fe">Crossmaglen, Co. Armagh</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#events">What's On</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 An Bonnán Buí CCÉ, Crossmaglen. Comhaltas Ceoltóirí Éireann.</span>
+    <span class="footer-built">Site by <a href="https://earwig.design" target="_blank">Earwig</a></span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-link, .m-cta').forEach(l => l.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>

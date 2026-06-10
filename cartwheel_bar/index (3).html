@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Cartwheel Bar, Cardinal O'Fiaich Square, Crossmaglen. Live music, pool, darts and the best pint in South Armagh.">
+<title>The Cartwheel | Crossmaglen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark-mid: #1A1A1A;
+    --dark-light: #242424;
+    --border: #2A2A2A;
+    --amber: #D4872A;
+    --amber-light: #E8A94A;
+    --cream: #F0EBE0;
+    --text: #C8C0B0;
+    --text-dim: #706860;
+    --green: #1A3A2A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 6vw;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-logo span { color: var(--amber); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cream); }
+
+  .nav-cta {
+    background: var(--amber) !important;
+    color: var(--black) !important;
+    padding: 8px 20px !important;
+    border-radius: 3px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--amber-light) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--cream); transition: all 0.25s; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 6vw 24px;
+    z-index: 99;
+    flex-direction: column;
+  }
+
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 15px; color: var(--text); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px; }
+  .mobile-menu a.m-cta { margin-top: 14px; background: var(--amber); color: var(--black); padding: 12px 20px; border-radius: 3px; text-align: center; font-weight: 500; border: none; text-transform: none; letter-spacing: 0; font-size: 14px; }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 6vw;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 60%, #1A0E00 0%, #0A0A0A 65%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.01) 60px, rgba(255,255,255,0.01) 61px);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid rgba(212,135,42,0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 700;
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--amber);
+    display: block;
+  }
+
+  .hero-location {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 36px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text);
+    max-width: 480px;
+    line-height: 1.75;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-amber {
+    background: var(--amber);
+    color: var(--black);
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-amber:hover { background: var(--amber-light); }
+
+  .btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-outline:hover { border-color: var(--text); color: var(--cream); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--text-dim), transparent);
+  }
+
+  /* OPENING HOURS STRIP */
+  .hours-strip {
+    background: var(--amber);
+    padding: 14px 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hours-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hours-item span { font-weight: 400; opacity: 0.7; }
+
+  /* ABOUT */
+  .about {
+    padding: 100px 6vw;
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-box {
+    background: var(--dark-mid);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  .about-img-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 40%, rgba(212,135,42,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(212,135,42,0.06);
+    line-height: 1;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .about-img-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    color: var(--text-dim);
+    opacity: 0.5;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .about-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 24px;
+  }
+
+  .about-detail-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  /* WHAT'S ON */
+  .whats-on {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 100px 6vw;
+  }
+
+  .whats-on-inner { max-width: 1160px; margin: 0 auto; }
+
+  .whats-on-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .whats-on-header .section-heading { margin-bottom: 0; }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .event-card {
+    background: var(--dark-mid);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    transition: border-color 0.2s;
+  }
+
+  .event-card:hover { border-color: rgba(212,135,42,0.4); }
+
+  .event-date {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+
+  .event-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+
+  .event-desc {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .event-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  /* LEAGUES */
+  .leagues {
+    padding: 100px 6vw;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .leagues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px;
+    margin-top: 56px;
+    border: 1px solid var(--border);
+  }
+
+  .league-card {
+    padding: 36px 32px;
+    border-right: 1px solid var(--border);
+    background: var(--dark);
+    transition: background 0.2s;
+  }
+
+  .league-card:hover { background: var(--dark-mid); }
+  .league-card:last-child { border-right: none; }
+
+  .league-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .league-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .league-desc {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .league-cta {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--amber);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
+  }
+
+  .league-cta:hover { opacity: 0.7; }
+
+  /* FIND US */
+  .find-us {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 100px 6vw;
+  }
+
+  .find-us-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-details { margin-top: 40px; }
+
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-row:last-child { border-bottom: none; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--dark-mid);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+
+  .contact-val {
+    font-size: 14px;
+    color: var(--cream);
+    line-height: 1.5;
+  }
+
+  .map-placeholder {
+    background: var(--dark-mid);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .map-placeholder p {
+    font-size: 13px;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  .map-link {
+    font-size: 13px;
+    color: var(--amber);
+    text-decoration: none;
+    border: 1px solid rgba(212,135,42,0.3);
+    padding: 8px 18px;
+    border-radius: 3px;
+    transition: background 0.2s;
+  }
+
+  .map-link:hover { background: rgba(212,135,42,0.1); }
+
+  /* FOOTER */
+  footer {
+    background: #050505;
+    border-top: 1px solid var(--border);
+    padding: 40px 6vw;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  .footer-logo span { color: var(--amber); opacity: 1; }
+
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+  .footer-links a { font-size: 12px; color: var(--text-dim); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy { font-size: 12px; color: var(--text-dim); }
+
+  .footer-built {
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .footer-built a { color: var(--amber); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+  .footer-built a:hover { opacity: 1; }
+
+  /* RESPONSIVE */
+  @media (max-width: 800px) {
+    .about, .find-us-inner { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .league-card { border-right: none !important; border-bottom: 1px solid var(--border); }
+    .league-card:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">The <span>Cartwheel</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#events">What's On</a></li>
+    <li><a href="#leagues">Leagues</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+    <li><a href="#find-us" class="nav-cta">Visit Us</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#events" class="mobile-link">What's On</a>
+  <a href="#leagues" class="mobile-link">Leagues</a>
+  <a href="#find-us" class="mobile-link">Find Us</a>
+  <a href="#find-us" class="m-cta">Visit Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Est. in the heart of South Armagh</div>
+  <h1>The<em>Cartwheel</em></h1>
+  <p class="hero-location">Cardinal O'Fiaich Square, Crossmaglen</p>
+  <p class="hero-sub">Your local in the heart of Crossmaglen. Live music, good company, cold pints and a warm welcome every night of the week.</p>
+  <div class="hero-actions">
+    <a href="#events" class="btn-amber">What's On</a>
+    <a href="#find-us" class="btn-outline">Find Us</a>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- HOURS STRIP -->
+<div class="hours-strip" aria-label="Opening hours">
+  <div class="hours-item">Mon-Thu <span>4pm - 11pm</span></div>
+  <div class="hours-item">Fri <span>3pm - 1am</span></div>
+  <div class="hours-item">Sat <span>12pm - 1am</span></div>
+  <div class="hours-item">Sun <span>12pm - 11pm</span></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-img-box">
+      <p class="about-img-label">Est. Crossmaglen</p>
+      <div class="about-year" aria-hidden="true">XMG</div>
+    </div>
+  </div>
+  <div class="about-text">
+    <p class="section-label">About the bar</p>
+    <h2 class="section-heading">A proper local in the centre of Crossmaglen</h2>
+    <p>The Cartwheel sits right on Cardinal O'Fiaich Square in the heart of Crossmaglen, South Armagh. Whether you're dropping in after work, catching live music on the weekend, or joining one of our league nights, there's always a welcome waiting.</p>
+    <p>We host regular live music sessions, traditional singing nights and events in partnership with An Bonnán Buí CCE, bringing the best of South Armagh's vibrant music scene right to your doorstep.</p>
+    <p>A place for the community. All are welcome.</p>
+    <div class="about-detail"><span class="about-detail-dot"></span>21 Cardinal O'Fiaich Square, Crossmaglen, BT35 9HG</div>
+    <div class="about-detail"><span class="about-detail-dot"></span>Live music events and traditional sessions</div>
+    <div class="about-detail"><span class="about-detail-dot"></span>Pool and darts leagues — all levels welcome</div>
+  </div>
+</section>
+
+<!-- WHAT'S ON -->
+<section class="whats-on" id="events">
+  <div class="whats-on-inner">
+    <div class="whats-on-header">
+      <div>
+        <p class="section-label">Events</p>
+        <h2 class="section-heading">What's on at The Cartwheel</h2>
+      </div>
+      <a href="#find-us" class="btn-outline" style="font-size:13px; padding:10px 20px;">Follow us for updates</a>
+    </div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-date">Every Friday</div>
+        <div class="event-name">Live Music Night</div>
+        <p class="event-desc">Local artists and traditional musicians taking to the floor every Friday from 9pm. Free entry, all welcome.</p>
+        <span class="event-tag">Music</span>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Regular sessions</div>
+        <div class="event-name">Traditional Singing Sessions</div>
+        <p class="event-desc">Hosted in partnership with An Bonnán Buí CCE. Singers and listeners both welcome from near and far.</p>
+        <span class="event-tag">Traditional</span>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Ongoing</div>
+        <div class="event-name">Pool League</div>
+        <p class="event-desc">We're building our pool squad for the local leagues. All levels welcome from total beginners to league veterans.</p>
+        <span class="event-tag">Sport</span>
+      </div>
+      <div class="event-card">
+        <div class="event-date">Ongoing</div>
+        <div class="event-name">Darts League</div>
+        <p class="event-desc">Fancy your chances on the oche? Join The Cartwheel darts team and compete in the local leagues.</p>
+        <span class="event-tag">Sport</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAGUES -->
+<section class="leagues" id="leagues">
+  <p class="section-label">Get involved</p>
+  <h2 class="section-heading">Join The Cartwheel Teams</h2>
+  <div class="leagues-grid">
+    <div class="league-card">
+      <div class="league-icon">🎱</div>
+      <div class="league-name">Pool League</div>
+      <p class="league-desc">We're putting together a pool squad for the local leagues. Whether you're a beginner or you've been playing for years, we want you on the team.</p>
+      <a href="#find-us" class="league-cta">Get in touch to join →</a>
+    </div>
+    <div class="league-card">
+      <div class="league-icon">🎯</div>
+      <div class="league-name">Darts League</div>
+      <p class="league-desc">Building our darts squad from scratch. All abilities genuinely welcome. Come in any evening and ask at the bar to get involved.</p>
+      <a href="#find-us" class="league-cta">Get in touch to join →</a>
+    </div>
+    <div class="league-card">
+      <div class="league-icon">🎵</div>
+      <div class="league-name">Music Sessions</div>
+      <p class="league-desc">Regular traditional music and singing sessions in partnership with An Bonnán Buí CCE. Performers and audience both always welcome.</p>
+      <a href="#find-us" class="league-cta">Find out more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section class="find-us" id="find-us">
+  <div class="find-us-inner">
+    <div>
+      <p class="section-label">Find us</p>
+      <h2 class="section-heading">Come in for a pint</h2>
+      <div class="contact-details">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4872A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-val">21 Cardinal O'Fiaich Square<br>Crossmaglen, BT35 9HG</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4872A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Social</div>
+            <div class="contact-val">@thecartwheelbar on Instagram<br>The Cartwheel on Facebook</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4872A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Opening hours</div>
+            <div class="contact-val">Mon–Thu: 4pm–11pm<br>Fri: 3pm–1am<br>Sat: 12pm–1am<br>Sun: 12pm–11pm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="map-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4872A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>Cardinal O'Fiaich Square<br>Crossmaglen, BT35 9HG</p>
+        <a href="https://maps.google.com/?q=The+Cartwheel+Bar+Crossmaglen" target="_blank" rel="noopener" class="map-link">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <a href="#" class="footer-logo">The <span>Cartwheel</span></a>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#leagues">Leagues</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 The Cartwheel Bar, Crossmaglen. All rights reserved.</span>
+    <span class="footer-built">Site by <a href="https://earwig.design" target="_blank">Earwig</a></span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-link, .m-cta').forEach(l => l.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
