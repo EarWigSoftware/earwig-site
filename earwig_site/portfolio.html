@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Earwig portfolio — bespoke websites built for hospitality, community and entertainment clients across Ireland.">
+<title>Portfolio | Earwig</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F4EE;
+    --cream-dark: #E8E4D9;
+    --cream-darker: #DDD8CC;
+    --forest: #1A3A2A;
+    --forest-mid: #254D38;
+    --forest-light: #2E6147;
+    --gold: #C9A84C;
+    --gold-dark: #A8882E;
+    --ink: #141414;
+    --ink-mid: #3D3D3D;
+    --ink-light: #888;
+    --white: #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream);
+    border-bottom: 1px solid var(--cream-dark);
+    padding: 0 6vw;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+
+  .nav-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--forest);
+    letter-spacing: 0.01em;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+
+  .nav-links a {
+    font-size: 14px;
+    color: var(--ink-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--forest); }
+  .nav-links a.active { color: var(--forest); font-weight: 500; }
+
+  .nav-cta {
+    background: var(--forest) !important;
+    color: var(--cream) !important;
+    padding: 9px 22px !important;
+    border-radius: 4px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--forest-mid) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--forest); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--cream-dark);
+    padding: 24px 6vw 28px;
+    z-index: 99;
+    flex-direction: column;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 16px; color: var(--ink-mid); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--cream-dark); }
+  .mobile-menu a.mobile-cta { margin-top: 16px; background: var(--forest); color: var(--cream); padding: 13px 20px; border-radius: 4px; text-align: center; font-weight: 500; border: none; }
+
+  /* HEADER */
+  .port-header {
+    padding: 80px 6vw 56px;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-light);
+    text-decoration: none;
+    margin-bottom: 32px;
+    transition: gap 0.2s, color 0.2s;
+  }
+  .back-link:hover { gap: 12px; color: var(--forest); }
+
+  .port-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .port-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  .port-intro {
+    font-size: 18px;
+    color: var(--ink-mid);
+    max-width: 540px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* CATEGORY SECTION */
+  .category {
+    padding: 48px 6vw;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .category-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .category-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--forest);
+    white-space: nowrap;
+  }
+
+  .category-line { flex: 1; height: 1px; background: var(--cream-darker); }
+
+  .category-count {
+    font-size: 13px;
+    color: var(--ink-light);
+    white-space: nowrap;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--cream-dark);
+    text-decoration: none;
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: block;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(26,58,42,0.12);
+  }
+
+  .project-thumb {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .thumb-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .thumb-type {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .project-meta {
+    background: var(--white);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project-client { font-size: 15px; font-weight: 500; color: var(--ink); }
+  .project-visit {
+    font-size: 12px;
+    color: var(--forest);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+  .project-card:hover .project-visit { gap: 10px; }
+
+  .project-soon {
+    background: var(--white);
+    padding: 20px 24px;
+  }
+  .project-soon .project-client { display: block; margin-bottom: 2px; }
+  .project-soon-label { font-size: 12px; color: var(--ink-light); }
+
+  /* CTA */
+  .port-cta {
+    background: var(--forest);
+    margin-top: 56px;
+    padding: 90px 6vw;
+    text-align: center;
+  }
+
+  .port-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .port-cta p {
+    font-size: 16px;
+    color: rgba(247,244,238,0.6);
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .cta-btn {
+    background: var(--gold);
+    color: var(--forest);
+    padding: 15px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .cta-btn:hover { background: var(--gold-dark); }
+
+  /* FOOTER */
+  footer { background: var(--ink); padding: 40px 6vw; }
+  .footer-top {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 24px;
+    padding-bottom: 32px; border-bottom: 1px solid rgba(247,244,238,0.08); margin-bottom: 28px;
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 500; color: var(--cream); opacity: 0.75; text-decoration: none; }
+  .footer-links { display: flex; gap: 28px; list-style: none; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: rgba(247,244,238,0.38); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: rgba(247,244,238,0.75); }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: rgba(247,244,238,0.25); }
+
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .project-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo" aria-label="Earwig home">
+    <svg width="30" height="22" viewBox="0 0 44 32" fill="none" aria-hidden="true">
+      <ellipse cx="22" cy="16" rx="10" ry="6" fill="#1A3A2A" opacity="0.85"/>
+      <path d="M12 16 Q4 10 2 6" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M12 16 Q4 18 2 22" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M32 16 Q40 10 42 6" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M32 16 Q40 18 42 22" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M19 22 Q20 28 22 30" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M25 22 Q24 28 22 30" stroke="#1A3A2A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <circle cx="16" cy="13" r="1.5" fill="#F7F4EE"/>
+      <circle cx="28" cy="13" r="1.5" fill="#F7F4EE"/>
+    </svg>
+    <span class="nav-wordmark">Earwig</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="portfolio.html" class="active">Work</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Get a quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="portfolio.html">Work</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact" class="mobile-cta">Get a quote</a>
+</div>
+
+<!-- HEADER -->
+<header class="port-header">
+  <a href="index.html" class="back-link"><span aria-hidden="true">←</span> Back to home</a>
+  <p class="port-eyebrow">Our work</p>
+  <h1 class="port-title">Websites we're proud of</h1>
+  <p class="port-intro">A look at some of the businesses, bands and community groups we've built bespoke websites for. Every one designed and built from scratch.</p>
+</header>
+
+<!-- HOSPITALITY -->
+<section class="category">
+  <div class="category-head">
+    <span class="category-name">Hospitality</span>
+    <span class="category-line"></span>
+    <span class="category-count">1 project</span>
+  </div>
+  <div class="project-grid">
+    <a href="https://thecartwheelbar.netlify.app" target="_blank" rel="noopener" class="project-card">
+      <div class="project-thumb" style="background:#123524; color:#F4EFE3;">
+        <span class="thumb-name">The Cartwheel</span>
+        <span class="thumb-type">Sports Bar &amp; Live Music Venue</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-client">The Cartwheel, Crossmaglen</span>
+        <span class="project-visit">Visit <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ENTERTAINMENT -->
+<section class="category">
+  <div class="category-head">
+    <span class="category-name">Entertainment</span>
+    <span class="category-line"></span>
+    <span class="category-count">1 project</span>
+  </div>
+  <div class="project-grid">
+    <a href="https://thedustywindowsills.netlify.app" target="_blank" rel="noopener" class="project-card">
+      <div class="project-thumb" style="background:#0B0C0A; color:#F2EFE6;">
+        <span class="thumb-name">The Dusty Windowsills</span>
+        <span class="thumb-type">Folk Band</span>
+      </div>
+      <div class="project-meta">
+        <span class="project-client">The Dusty Windowsills</span>
+        <span class="project-visit">Visit <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="category">
+  <div class="category-head">
+    <span class="category-name">Community</span>
+    <span class="category-line"></span>
+    <span class="category-count">1 project</span>
+  </div>
+  <div class="project-grid">
+    <div class="project-card" style="cursor:default;">
+      <div class="project-thumb" style="background:#F5E9A0; color:#1A1600;">
+        <span class="thumb-name">An Bonnán Buí CCÉ</span>
+        <span class="thumb-type">Comhaltas, Crossmaglen</span>
+      </div>
+      <div class="project-soon">
+        <span class="project-client">An Bonnán Buí CCÉ</span>
+        <span class="project-soon-label">Coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="port-cta">
+  <h2>Like what you see?</h2>
+  <p>Let's build something just as good for your business.</p>
+  <a href="index.html#contact" class="cta-btn">Start a project</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <a href="index.html" class="footer-logo">Earwig</a>
+    <ul class="footer-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio.html">Work</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="mailto:contact@earwig.design">contact@earwig.design</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Earwig. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(l => l.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
