@@ -85,6 +85,25 @@
 
   .nav-links a:hover { color: var(--forest); }
 
+  .nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-left: 4px;
+    border-left: 1px solid var(--cream-dark);
+    margin-left: 4px;
+  }
+
+  .nav-socials a {
+    display: flex;
+    align-items: center;
+    color: var(--ink-light);
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+  }
+
+  .nav-social:hover { color: var(--forest) !important; transform: translateY(-2px); }
+
   .nav-cta {
     background: var(--forest) !important;
     color: var(--cream) !important;
@@ -153,6 +172,23 @@
     border: none;
   }
 
+  .mobile-socials {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cream-dark);
+  }
+
+  .mobile-socials a {
+    color: var(--ink-light);
+    display: flex;
+    transition: color 0.2s;
+  }
+
+  .mobile-socials a:hover { color: var(--forest); }
+
   /* ── HERO ── */
   .hero {
     padding: 96px 6vw 88px;
@@ -197,6 +233,16 @@
   .hero h1 em {
     font-style: italic;
     color: var(--forest);
+  }
+
+  .hero-slogan {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 30px);
+    font-weight: 500;
+    color: var(--forest);
+    margin-bottom: 24px;
+    letter-spacing: 0.01em;
   }
 
   .hero-sub {
@@ -1000,9 +1046,17 @@
   </a>
   <ul class="nav-links" role="list">
     <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
+    <li><a href="portfolio.html">Work</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#about">About</a></li>
+    <li class="nav-socials">
+      <a href="https://www.instagram.com/earwig.design/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61590833516578" target="_blank" rel="noopener" class="nav-social" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6 4.39 10.97 10.13 11.85v-8.38H7.08v-3.47h3.05V9.41c0-3.02 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.47h-2.8v8.38C19.61 23.04 24 18.07 24 12.07z"/></svg>
+      </a>
+    </li>
     <li><a href="#contact" class="nav-cta">Get a quote</a></li>
   </ul>
   <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
@@ -1012,19 +1066,28 @@
 
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
   <a href="#services" class="mobile-link">Services</a>
-  <a href="#work" class="mobile-link">Work</a>
+  <a href="portfolio.html" class="mobile-link">Work</a>
   <a href="#pricing" class="mobile-link">Pricing</a>
   <a href="#about" class="mobile-link">About</a>
   <a href="#contact" class="mobile-cta">Get a quote</a>
+  <div class="mobile-socials">
+    <a href="https://www.instagram.com/earwig.design/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61590833516578" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6 4.39 10.97 10.13 11.85v-8.38H7.08v-3.47h3.05V9.41c0-3.02 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.47h-2.8v8.38C19.61 23.04 24 18.07 24 12.07z"/></svg>
+    </a>
+  </div>
 </div>
 
 <!-- HERO -->
 <section class="hero" aria-label="Hero">
   <div class="hero-eyebrow">
     <span class="hero-eyebrow-dot" aria-hidden="true"></span>
-    Web design studio — Crossmaglen &amp; remote
+    Bespoke web design studio
   </div>
   <h1>Websites that make your business <em>impossible to ignore</em></h1>
+  <p class="hero-slogan">Built fast. Priced fair.</p>
   <p class="hero-sub">Bespoke, fast-loading websites for small businesses, law firms, and startups. Professional results, without the agency price tag.</p>
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Start a project</a>
@@ -1151,48 +1214,48 @@
       <p class="section-label">Our work</p>
       <h2 class="section-heading" id="work-heading">Recent projects</h2>
     </div>
-    <a href="#contact" class="btn-ghost">Start your project <span aria-hidden="true">→</span></a>
+    <a href="portfolio.html" class="btn-ghost">View all work <span aria-hidden="true">→</span></a>
   </div>
   <div class="portfolio-grid">
-    <div class="portfolio-card">
-      <div class="portfolio-thumb" style="background:#1A2E20; color:#F7F4EE;">
+    <a href="https://thecartwheelbar.netlify.app" target="_blank" rel="noopener" class="portfolio-card" style="text-decoration:none;">
+      <div class="portfolio-thumb" style="background:#123524; color:#F7F4EE;">
         <span class="thumb-name">The Cartwheel</span>
         <span class="thumb-type">Bar &amp; venue</span>
       </div>
       <div class="portfolio-meta">
         <div>
           <div class="portfolio-tag">Hospitality</div>
-          <div class="portfolio-title">Coming soon</div>
+          <div class="portfolio-title">Visit site</div>
         </div>
         <span class="portfolio-arrow" aria-hidden="true">→</span>
       </div>
-    </div>
-    <div class="portfolio-card">
-      <div class="portfolio-thumb" style="background:#2A2200; color:#F7F4EE;">
-        <span class="thumb-name">An Bonnán Buí</span>
-        <span class="thumb-type">Comhaltas, Crossmaglen</span>
+    </a>
+    <a href="https://thedustywindowsills.netlify.app" target="_blank" rel="noopener" class="portfolio-card" style="text-decoration:none;">
+      <div class="portfolio-thumb" style="background:#0B0C0A; color:#F2EFE6;">
+        <span class="thumb-name">The Dusty Windowsills</span>
+        <span class="thumb-type">Folk band</span>
       </div>
       <div class="portfolio-meta">
         <div>
-          <div class="portfolio-tag">Community</div>
-          <div class="portfolio-title">Coming soon</div>
+          <div class="portfolio-tag">Entertainment</div>
+          <div class="portfolio-title">Visit site</div>
         </div>
         <span class="portfolio-arrow" aria-hidden="true">→</span>
       </div>
-    </div>
-    <div class="portfolio-card">
-      <div class="portfolio-thumb" style="background:#0F1D40; color:#F7F4EE;">
-        <span class="thumb-name">Your business</span>
-        <span class="thumb-type">Could be next</span>
+    </a>
+    <a href="portfolio.html" class="portfolio-card" style="text-decoration:none;">
+      <div class="portfolio-thumb" style="background:#1A3A2A; color:#F7F4EE;">
+        <span class="thumb-name">See more</span>
+        <span class="thumb-type">View the full portfolio</span>
       </div>
       <div class="portfolio-meta">
         <div>
-          <div class="portfolio-tag">Get in touch</div>
-          <div class="portfolio-title">Let's build something</div>
+          <div class="portfolio-tag">All projects</div>
+          <div class="portfolio-title">Browse our work</div>
         </div>
         <span class="portfolio-arrow" aria-hidden="true">→</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -1326,7 +1389,7 @@
     </a>
     <ul class="footer-links" role="list">
       <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="portfolio.html">Work</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="mailto:contact@earwig.design">contact@earwig.design</a></li>
