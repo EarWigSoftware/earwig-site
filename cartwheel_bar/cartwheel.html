@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Cartwheel Sports Bar & Live Music Venue, 21A Cardinal O'Fiach Square, Crossmaglen. Renowned for great pints, live music and live sport in the heart of South Armagh.">
+<title>The Cartwheel | Sports Bar & Live Music Venue, Crossmaglen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-deep: #0C2419;
+    --green: #123524;
+    --green-mid: #1B4A32;
+    --green-light: #2A6347;
+    --gold: #C9A24B;
+    --gold-light: #E0BE6A;
+    --gold-pale: #F0E2BC;
+    --cream: #F4EFE3;
+    --cream-dim: #D8D0BE;
+    --text: #CFC9B8;
+    --text-dim: #8A8470;
+    --ink: #0A1812;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--green-deep);
+    color: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(12,36,25,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,162,75,0.15);
+    padding: 0 6vw;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    border: 1px solid var(--gold) !important;
+    color: var(--gold-light) !important;
+    padding: 9px 22px !important;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold); color: var(--green-deep) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--gold-light); transition: all 0.25s; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    border-bottom: 1px solid rgba(201,162,75,0.2);
+    padding: 24px 6vw 28px;
+    z-index: 99;
+    flex-direction: column;
+  }
+
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 13px; color: var(--text); text-decoration: none; padding: 14px 0; border-bottom: 1px solid rgba(201,162,75,0.1); text-transform: uppercase; letter-spacing: 0.08em; }
+  .mobile-menu a.m-cta { margin-top: 16px; border: 1px solid var(--gold); color: var(--gold-light); padding: 13px 20px; border-radius: 2px; text-align: center; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 6vw 80px;
+    position: relative;
+    background:
+      linear-gradient(rgba(12,36,25,0.82), rgba(12,36,25,0.92)),
+      radial-gradient(ellipse at 50% 0%, #1B4A32 0%, #0C2419 70%);
+  }
+
+  /* Decorative corner flourishes */
+  .hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(201,162,75,0.25);
+    pointer-events: none;
+  }
+  .hero::before { top: 96px; left: 6vw; border-right: none; border-bottom: none; }
+  .hero::after { bottom: 40px; right: 6vw; border-left: none; border-top: none; }
+
+  .hero-logo-mark {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 32px;
+  }
+
+  .hero-logo-img {
+    width: 200px;
+    max-width: 60vw;
+    height: auto;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 30px rgba(201,162,75,0.25));
+  }
+
+  .hero-logo-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .hero-logo-wrap::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    max-width: 80vw;
+    max-height: 80vw;
+    background: radial-gradient(circle, rgba(201,162,75,0.18) 0%, transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-tagline {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(56px, 9vw, 120px);
+    font-weight: 600;
+    line-height: 0.92;
+    color: var(--cream);
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero h1 .the {
+    display: block;
+    font-size: 0.35em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .hero-divider-line { width: 60px; height: 1px; background: rgba(201,162,75,0.4); }
+  .hero-divider-dot { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text);
+    max-width: 540px;
+    line-height: 1.8;
+    margin-bottom: 44px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--green-deep);
+    padding: 15px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+
+  .btn-gold:hover { background: var(--gold-light); }
+
+  .btn-outline {
+    border: 1px solid rgba(201,162,75,0.4);
+    color: var(--gold-light);
+    padding: 15px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); background: rgba(201,162,75,0.08); }
+
+  /* MARQUEE */
+  .marquee {
+    background: var(--gold);
+    padding: 13px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 26s linear infinite;
+  }
+
+  .marquee-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--green-deep);
+    padding: 0 28px;
+  }
+
+  .marquee-star { color: var(--green); font-size: 12px; }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* SECTION SHARED */
+  .section {
+    padding: 110px 6vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  /* WELCOME / ABOUT */
+  .welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .welcome-text p {
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .welcome-text p:first-of-type {
+    font-size: 19px;
+    color: var(--cream);
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .welcome-visual {
+    position: relative;
+    height: 480px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(201,162,75,0.2);
+    background:
+      linear-gradient(135deg, rgba(27,74,50,0.4) 0%, rgba(12,36,25,0.9) 100%),
+      radial-gradient(circle at 30% 30%, rgba(201,162,75,0.15) 0%, transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-visual-inner {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .welcome-visual-mark {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 24px;
+    opacity: 0.95;
+  }
+
+  .welcome-visual-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--gold-pale);
+    line-height: 1.5;
+  }
+
+  /* OFFERINGS */
+  .offerings {
+    background: var(--green);
+    border-top: 1px solid rgba(201,162,75,0.15);
+    border-bottom: 1px solid rgba(201,162,75,0.15);
+  }
+
+  .offerings-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 6vw;
+  }
+
+  .offerings-head {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .offerings-head .eyebrow { justify-content: center; }
+  .offerings-head .eyebrow::before { display: none; }
+  .offerings-head .section-title { margin-bottom: 0; }
+
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  .offering {
+    text-align: center;
+    padding: 44px 32px;
+    border: 1px solid rgba(201,162,75,0.18);
+    border-radius: 4px;
+    background: rgba(12,36,25,0.4);
+    transition: border-color 0.3s, transform 0.3s, background 0.3s;
+  }
+
+  .offering:hover {
+    border-color: rgba(201,162,75,0.5);
+    transform: translateY(-4px);
+    background: rgba(12,36,25,0.7);
+  }
+
+  .offering-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold-light);
+  }
+
+  .offering-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .offering-desc {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  /* LIVE MUSIC FEATURE */
+  .music {
+    position: relative;
+    background:
+      linear-gradient(rgba(10,24,18,0.88), rgba(10,24,18,0.94)),
+      radial-gradient(ellipse at 70% 50%, #1B4A32 0%, #0A1812 70%);
+    padding: 120px 6vw;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .music-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .music .eyebrow { justify-content: center; }
+  .music .eyebrow::before { display: none; }
+
+  .music h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5.5vw, 68px);
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+
+  .music h2 em { color: var(--gold-light); font-style: italic; }
+
+  .music p {
+    font-size: 17px;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .music-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold-pale);
+    border-top: 1px solid rgba(201,162,75,0.25);
+    border-bottom: 1px solid rgba(201,162,75,0.25);
+    padding: 24px 0;
+    margin-top: 8px;
+  }
+
+  .music-socials {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(201,162,75,0.4);
+    color: var(--gold-light);
+    padding: 14px 26px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .social-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--green-deep);
+  }
+
+  /* INFO / FIND US */
+  .find {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .find-details { margin-top: 36px; }
+
+  .find-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(201,162,75,0.15);
+  }
+
+  .find-row:last-child { border-bottom: none; }
+
+  .find-icon {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(201,162,75,0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold-light);
+  }
+
+  .find-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+
+  .find-val {
+    font-size: 15px;
+    color: var(--cream);
+    line-height: 1.6;
+  }
+
+  .find-val a { color: var(--cream); text-decoration: none; border-bottom: 1px solid rgba(201,162,75,0.3); transition: border-color 0.2s; }
+  .find-val a:hover { border-color: var(--gold); }
+
+  .hours-card {
+    background: var(--green);
+    border: 1px solid rgba(201,162,75,0.2);
+    border-radius: 4px;
+    padding: 40px;
+  }
+
+  .hours-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .hours-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(201,162,75,0.12);
+  }
+
+  .hours-row:last-child { border-bottom: none; }
+
+  .hours-day {
+    font-size: 14px;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  .hours-time {
+    font-size: 14px;
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .hours-cta {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid rgba(201,162,75,0.15);
+    padding: 56px 6vw 40px;
+  }
+
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(201,162,75,0.12);
+    margin-bottom: 28px;
+  }
+
+  .footer-mark {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .footer-tagline {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(201,162,75,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .footer-social a:hover { background: rgba(201,162,75,0.1); border-color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy { font-size: 12px; color: var(--text-dim); }
+  .footer-built { font-size: 12px; color: var(--text-dim); }
+  .footer-built a { color: var(--gold); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+  .footer-built a:hover { opacity: 1; }
+
+  @media (max-width: 860px) {
+    .welcome, .find { grid-template-columns: 1fr; gap: 48px; }
+    .welcome-visual { height: 340px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero::before, .hero::after { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <img src="logo-cream.png" alt="The Cartwheel" style="height:46px;width:auto;" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#welcome">The Bar</a></li>
+    <li><a href="#offerings">What We Offer</a></li>
+    <li><a href="#music">What's On</a></li>
+    <li><a href="#find">Find Us</a></li>
+    <li><a href="#find" class="nav-cta">Visit</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#welcome" class="mobile-link">The Bar</a>
+  <a href="#offerings" class="mobile-link">What We Offer</a>
+  <a href="#music" class="mobile-link">What's On</a>
+  <a href="#find" class="mobile-link">Find Us</a>
+  <a href="#find" class="m-cta">Visit</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-logo-wrap">
+    <img src="logo-cream.png" alt="The Cartwheel" class="hero-logo-img" />
+  </div>
+  <p class="hero-tagline">Sports Bar &amp; Live Music Venue</p>
+  <div class="hero-divider">
+    <span class="hero-divider-line"></span>
+    <span class="hero-divider-dot"></span>
+    <span class="hero-divider-line"></span>
+  </div>
+  <p class="hero-sub">In the heart of Crossmaglen. A proper local renowned for a great pint, sport on the big screens, and a great night out.</p>
+  <div class="hero-actions">
+    <a href="#music" class="btn-gold">What's On</a>
+    <a href="#find" class="btn-outline">Find Us</a>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Great Pints</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Live Music</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Live Sport</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Pool &amp; Darts</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Beer Garden</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Great Pints</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Live Music</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Live Sport</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Pool &amp; Darts</span><span class="marquee-item marquee-star">✦</span>
+    <span class="marquee-item">Beer Garden</span><span class="marquee-item marquee-star">✦</span>
+  </div>
+</div>
+
+<!-- WELCOME -->
+<section class="section" id="welcome">
+  <div class="welcome">
+    <div class="welcome-text">
+      <p class="eyebrow">Céad Míle Fáilte</p>
+      <h2 class="section-title">Your local in the heart of Crossmaglen</h2>
+      <p>A hundred thousand welcomes to The Cartwheel.</p>
+      <p>Sitting proudly on Cardinal O'Fiach Square, The Cartwheel is one of Crossmaglen's best-loved bars. We're a sports bar and live music venue rolled into one, with a reputation built on a perfectly poured pint and a proper warm welcome.</p>
+      <p>Whether you're calling in for a quiet Guinness, meeting friends to watch the match, or settling in for a night of live music, you'll always find a good atmosphere and good company waiting at The Cartwheel.</p>
+    </div>
+    <div class="welcome-visual">
+      <div class="welcome-visual-inner">
+        <img src="logo-cream.png" alt="The Cartwheel" class="welcome-visual-mark" />
+        <p class="welcome-visual-text">"There are no strangers here,<br>only friends you haven't met."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<div class="offerings" id="offerings">
+  <div class="offerings-inner">
+    <div class="offerings-head">
+      <p class="eyebrow">What we offer</p>
+      <h2 class="section-title">Everything a good local should be</h2>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering">
+        <div class="offering-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14l-1 9a5 5 0 0 1-5 4h-2a5 5 0 0 1-5-4L5 3z"/><path d="M19 7h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>
+        </div>
+        <h3 class="offering-title">A Great Pint</h3>
+        <p class="offering-desc">Renowned across South Armagh for a perfectly poured pint. Guinness, Harp, Heineken and more, served exactly as they should be.</p>
+      </div>
+      <div class="offering">
+        <div class="offering-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3 class="offering-title">Live Music</h3>
+        <p class="offering-desc">Regular live music nights with the best local acts. Keep an eye on our socials for what's coming up and who's playing.</p>
+      </div>
+      <div class="offering">
+        <div class="offering-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7z"/><path d="M2 7l3-4h14l3 4"/><circle cx="12" cy="13" r="3"/></svg>
+        </div>
+        <h3 class="offering-title">Live Sport</h3>
+        <p class="offering-desc">All the big games on the big screens. GAA, football, racing and more. The best spot in Cross to roar on your team.</p>
+      </div>
+      <div class="offering">
+        <div class="offering-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <h3 class="offering-title">Pool &amp; Darts</h3>
+        <p class="offering-desc">Pool tables and dartboards ready and waiting. Challenge your mates to a game any night of the week.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S ON FEATURE -->
+<section class="music" id="music">
+  <div class="music-inner">
+    <p class="eyebrow">Stay in the loop</p>
+    <h2>Good pints, good company, <em>great nights</em></h2>
+    <p>From live music nights to the big match on the screens, there's always something happening at The Cartwheel. The best way to keep up with what's on is to follow us on social media, where we post our events, live music line-ups and fixtures.</p>
+    <div class="music-socials">
+      <a href="https://www.facebook.com/people/The-Cartwheel/61553700232505/" target="_blank" rel="noopener" class="social-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Follow on Facebook
+      </a>
+      <a href="https://www.instagram.com/thecartwheelbar/" target="_blank" rel="noopener" class="social-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section class="section" id="find">
+  <div class="find">
+    <div>
+      <p class="eyebrow">Find us</p>
+      <h2 class="section-title">Call in and see us</h2>
+      <div class="find-details">
+        <div class="find-row">
+          <div class="find-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="find-label">Where to find us</div>
+            <div class="find-val">21A Cardinal O'Fiach Square<br>Crossmaglen, Co. Armagh, BT35 9HG</div>
+          </div>
+        </div>
+        <div class="find-row">
+          <div class="find-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <div class="find-label">Get in touch</div>
+            <div class="find-val"><a href="mailto:thecartwheelbar@gmail.com">thecartwheelbar@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="find-row">
+          <div class="find-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </div>
+          <div>
+            <div class="find-label">Follow us</div>
+            <div class="find-val"><a href="https://www.instagram.com/thecartwheelbar/" target="_blank" rel="noopener">@thecartwheelbar on Instagram</a><br><a href="https://www.facebook.com/people/The-Cartwheel/61553700232505/" target="_blank" rel="noopener">The Cartwheel on Facebook</a></div>
+          </div>
+        </div>
+        <div class="find-row">
+          <div class="find-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="find-label">Beer garden</div>
+            <div class="find-val">Sunny days sorted — our outdoor beer garden is open and waiting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hours-card">
+        <div class="hours-card-title">Opening Hours</div>
+        <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">4pm – 11pm</span></div>
+        <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">4pm – 11pm</span></div>
+        <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">4pm – 11pm</span></div>
+        <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">4pm – 11.30pm</span></div>
+        <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">3pm – 1am</span></div>
+        <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">12pm – 1am</span></div>
+        <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">12pm – 11pm</span></div>
+        <div class="hours-cta">
+          <a href="https://maps.google.com/?q=The+Cartwheel+Bar+Crossmaglen" target="_blank" rel="noopener" class="btn-outline" style="display:inline-block;">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <img src="logo-cream.png" alt="The Cartwheel" class="footer-mark" />
+      <div class="footer-tagline">Sports Bar &amp; Live Music Venue</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/thecartwheelbar/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.facebook.com/people/The-Cartwheel/61553700232505/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 The Cartwheel, Crossmaglen. All rights reserved.</span>
+      <span class="footer-built">Site by <a href="https://earwig.design" target="_blank">Earwig</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-link, .m-cta').forEach(l => l.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 50 ? 'rgba(10,24,18,0.95)' : 'rgba(12,36,25,0.85)';
+  });
+</script>
+</body>
+</html>
