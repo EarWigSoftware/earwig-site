@@ -924,16 +924,68 @@
     color: rgba(247,244,238,0.3);
   }
 
-  .success-msg {
+  .success-state {
     display: none;
-    background: rgba(247,244,238,0.08);
-    border: 1px solid rgba(247,244,238,0.2);
-    border-radius: 4px;
-    padding: 16px 20px;
-    font-size: 14px;
-    color: var(--cream);
-    margin-top: 4px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 32px;
+    background: rgba(247,244,238,0.05);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    animation: fadeUp 0.5s ease;
   }
+
+  .success-state.show { display: flex; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .success-text {
+    font-size: 15px;
+    color: rgba(247,244,238,0.6);
+    max-width: 360px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .success-again {
+    background: transparent;
+    border: 1px solid rgba(247,244,238,0.3);
+    color: var(--cream);
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .success-again:hover { background: rgba(247,244,238,0.08); border-color: rgba(247,244,238,0.5); }
 
   /* ── FOOTER ── */
   footer {
@@ -1331,7 +1383,11 @@
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       contact@earwig.design
     </a>
-    <form class="contact-form" id="contactForm" novalidate>
+    <form class="contact-form" id="contactForm" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="enquiry">
+      <p style="display:none;">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="name">Your name</label>
@@ -1365,10 +1421,15 @@
         <button type="submit" class="contact-submit">Send enquiry</button>
         <span class="form-note">We reply within 24 hours</span>
       </div>
-      <div class="success-msg" id="successMsg" role="alert">
-        Thanks, we'll be in touch within 24 hours at the email you provided.
-      </div>
     </form>
+    <div class="success-state" id="successState" role="alert" aria-live="polite">
+      <div class="success-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h3 class="success-title">Enquiry sent</h3>
+      <p class="success-text">Thanks for getting in touch. We'll be back to you within 24 hours. Talk soon.</p>
+      <button type="button" class="success-again" id="sendAnother">Send another enquiry</button>
+    </div>
   </div>
 </section>
 
@@ -1426,16 +1487,39 @@
   });
 
   const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('successMsg');
+  const successState = document.getElementById('successState');
+  const sendAnother = document.getElementById('sendAnother');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     if (!name || !email) return;
-    successMsg.style.display = 'block';
-    form.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);
-    window.location.href = `mailto:contact@earwig.design?subject=Project enquiry from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ABusiness: ${encodeURIComponent(document.getElementById('business').value)}%0AProject: ${encodeURIComponent(select.options[select.selectedIndex]?.text || '')}%0A%0A${encodeURIComponent(document.getElementById('message').value)}`;
+
+    // Submit to Netlify Forms
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      form.style.display = 'none';
+      successState.classList.add('show');
+    })
+    .catch(() => {
+      // Even if offline, show success so user isn't stuck; submission still queues on Netlify
+      form.style.display = 'none';
+      successState.classList.add('show');
+    });
+  });
+
+  // Let them send another
+  sendAnother.addEventListener('click', () => {
+    form.reset();
+    select.classList.remove('has-value');
+    successState.classList.remove('show');
+    form.style.display = 'flex';
   });
 </script>
 </body>

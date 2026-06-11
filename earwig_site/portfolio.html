@@ -74,6 +74,24 @@
   .nav-links a:hover { color: var(--forest); }
   .nav-links a.active { color: var(--forest); font-weight: 500; }
 
+  .nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-left: 4px;
+    border-left: 1px solid var(--cream-dark);
+    margin-left: 4px;
+  }
+
+  .nav-socials a {
+    display: flex;
+    align-items: center;
+    color: var(--ink-light);
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .nav-social:hover { color: var(--forest) !important; transform: translateY(-2px); }
+
   .nav-cta {
     background: var(--forest) !important;
     color: var(--cream) !important;
@@ -101,6 +119,17 @@
   .mobile-menu.open { display: flex; }
   .mobile-menu a { font-size: 16px; color: var(--ink-mid); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--cream-dark); }
   .mobile-menu a.mobile-cta { margin-top: 16px; background: var(--forest); color: var(--cream); padding: 13px 20px; border-radius: 4px; text-align: center; font-weight: 500; border: none; }
+
+  .mobile-socials {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cream-dark);
+  }
+  .mobile-socials a { color: var(--ink-light); display: flex; transition: color 0.2s; }
+  .mobile-socials a:hover { color: var(--forest); }
 
   /* HEADER */
   .port-header {
@@ -329,6 +358,14 @@
     <li><a href="portfolio.html" class="active">Work</a></li>
     <li><a href="index.html#pricing">Pricing</a></li>
     <li><a href="index.html#about">About</a></li>
+    <li class="nav-socials">
+      <a href="https://www.instagram.com/earwig.design/" target="_blank" rel="noopener" class="nav-social" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61590833516578" target="_blank" rel="noopener" class="nav-social" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6 4.39 10.97 10.13 11.85v-8.38H7.08v-3.47h3.05V9.41c0-3.02 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.47h-2.8v8.38C19.61 23.04 24 18.07 24 12.07z"/></svg>
+      </a>
+    </li>
     <li><a href="index.html#contact" class="nav-cta">Get a quote</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -342,6 +379,14 @@
   <a href="index.html#pricing">Pricing</a>
   <a href="index.html#about">About</a>
   <a href="index.html#contact" class="mobile-cta">Get a quote</a>
+  <div class="mobile-socials">
+    <a href="https://www.instagram.com/earwig.design/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61590833516578" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6 4.39 10.97 10.13 11.85v-8.38H7.08v-3.47h3.05V9.41c0-3.02 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.47h-2.8v8.38C19.61 23.04 24 18.07 24 12.07z"/></svg>
+    </a>
+  </div>
 </div>
 
 <!-- HEADER -->
