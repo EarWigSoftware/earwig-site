@@ -824,168 +824,67 @@
     line-height: 1.7;
   }
 
-  .contact-email-line {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: var(--gold);
-    margin-bottom: 52px;
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-
-  .contact-email-line:hover { opacity: 0.75; }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .form-row {
+  .contact-options {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  .form-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(247,244,238,0.4);
-    display: block;
-    margin-bottom: 7px;
-  }
-
-  .form-group { display: flex; flex-direction: column; }
-
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form select {
-    width: 100%;
-    padding: 13px 16px;
-    background: rgba(247,244,238,0.07);
-    border: 1px solid rgba(247,244,238,0.13);
-    border-radius: 4px;
-    color: var(--cream);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s, background 0.2s;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: rgba(247,244,238,0.28); }
-
-  .contact-form input:focus,
-  .contact-form textarea:focus,
-  .contact-form select:focus {
-    border-color: rgba(247,244,238,0.35);
-    background: rgba(247,244,238,0.1);
-  }
-
-  .contact-form textarea { min-height: 130px; resize: vertical; }
-
-  .contact-form select { color: rgba(247,244,238,0.28); cursor: pointer; }
-  .contact-form select.has-value { color: var(--cream); }
-  .contact-form select option { background: #1A3A2A; color: var(--cream); }
-
-  .form-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-top: 4px;
+    margin-top: 8px;
   }
 
-  .contact-submit {
-    background: var(--gold);
-    color: var(--forest);
-    border: none;
-    padding: 15px 36px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-    letter-spacing: 0.01em;
-  }
-
-  .contact-submit:hover { background: var(--gold-dark); }
-
-  .form-note {
-    font-size: 12px;
-    color: rgba(247,244,238,0.3);
-  }
-
-  .success-state {
-    display: none;
+  .contact-option {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 48px 32px;
+    gap: 12px;
+    padding: 40px 24px;
     background: rgba(247,244,238,0.05);
-    border: 1px solid rgba(201,168,76,0.3);
+    border: 1px solid rgba(247,244,238,0.12);
     border-radius: 8px;
-    animation: fadeUp 0.5s ease;
+    text-decoration: none;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
   }
 
-  .success-state.show { display: flex; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+  .contact-option:hover {
+    background: rgba(247,244,238,0.09);
+    border-color: var(--gold);
+    transform: translateY(-4px);
   }
 
-  .success-icon {
-    width: 64px;
-    height: 64px;
+  .contact-option-icon {
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: rgba(201,168,76,0.15);
-    border: 1px solid var(--gold);
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--gold);
-    margin-bottom: 24px;
+    margin-bottom: 4px;
+    transition: background 0.25s;
   }
 
-  .success-title {
+  .contact-option:hover .contact-option-icon { background: rgba(201,168,76,0.22); }
+
+  .contact-option-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(247,244,238,0.45);
+  }
+
+  .contact-option-value {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--cream);
-    margin-bottom: 10px;
   }
 
-  .success-text {
-    font-size: 15px;
-    color: rgba(247,244,238,0.6);
-    max-width: 360px;
-    line-height: 1.7;
-    margin-bottom: 28px;
-    font-weight: 300;
+  @media (max-width: 680px) {
+    .contact-options { grid-template-columns: 1fr; }
   }
-
-  .success-again {
-    background: transparent;
-    border: 1px solid rgba(247,244,238,0.3);
-    color: var(--cream);
-    padding: 12px 26px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
-  }
-
-  .success-again:hover { background: rgba(247,244,238,0.08); border-color: rgba(247,244,238,0.5); }
 
   /* ── FOOTER ── */
   footer {
@@ -1378,57 +1277,29 @@
   <div class="contact-inner">
     <p class="section-label">Get in touch</p>
     <h2 id="contact-heading">Let's build something together</h2>
-    <p class="contact-sub">Tell us about your project and we'll get back to you within 24 hours with a no-obligation quote.</p>
-    <a href="mailto:contact@earwig.design" class="contact-email-line" aria-label="Send email to contact@earwig.design">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      contact@earwig.design
-    </a>
-    <form class="contact-form" id="contactForm" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="enquiry">
-      <p style="display:none;">
-        <label>Don't fill this out: <input name="bot-field"></label>
-      </p>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="John Smith" autocomplete="name" required>
+    <p class="contact-sub">Looking for a website, or just want to chat about an idea? Reach out any way you like and we'll get back to you within 24 hours.</p>
+    <div class="contact-options">
+      <a href="mailto:contact@earwig.design" class="contact-option">
+        <div class="contact-option-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="john@yourcompany.com" autocomplete="email" required>
+        <div class="contact-option-label">Email</div>
+        <div class="contact-option-value">contact@earwig.design</div>
+      </a>
+      <a href="https://www.instagram.com/earwig.design/" target="_blank" rel="noopener" class="contact-option">
+        <div class="contact-option-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="business">Business name</label>
-        <input type="text" id="business" name="business" placeholder="Your business name">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="project">Type of project</label>
-        <select id="project" name="project">
-          <option value="" disabled selected>Select a project type</option>
-          <option value="new">New website</option>
-          <option value="redesign">Redesign existing site</option>
-          <option value="landing">Landing page</option>
-          <option value="hosting">Hosting &amp; maintenance</option>
-          <option value="unsure">Not sure yet, let's talk</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="message">Tell us about your project</label>
-        <textarea id="message" name="message" placeholder="What does your business do, and what do you need from your website?"></textarea>
-      </div>
-      <div class="form-bottom">
-        <button type="submit" class="contact-submit">Send enquiry</button>
-        <span class="form-note">We reply within 24 hours</span>
-      </div>
-    </form>
-    <div class="success-state" id="successState" role="alert" aria-live="polite">
-      <div class="success-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      </div>
-      <h3 class="success-title">Enquiry sent</h3>
-      <p class="success-text">Thanks for getting in touch. We'll be back to you within 24 hours. Talk soon.</p>
-      <button type="button" class="success-again" id="sendAnother">Send another enquiry</button>
+        <div class="contact-option-label">Instagram</div>
+        <div class="contact-option-value">@earwig.design</div>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61590833516578" target="_blank" rel="noopener" class="contact-option">
+        <div class="contact-option-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6 4.39 10.97 10.13 11.85v-8.38H7.08v-3.47h3.05V9.41c0-3.02 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.47h-2.8v8.38C19.61 23.04 24 18.07 24 12.07z"/></svg>
+        </div>
+        <div class="contact-option-label">Facebook</div>
+        <div class="contact-option-value">Message us</div>
+      </a>
     </div>
   </div>
 </section>
@@ -1479,47 +1350,6 @@
       mobileMenu.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
     });
-  });
-
-  const select = document.getElementById('project');
-  select.addEventListener('change', () => {
-    select.classList.toggle('has-value', select.value !== '');
-  });
-
-  const form = document.getElementById('contactForm');
-  const successState = document.getElementById('successState');
-  const sendAnother = document.getElementById('sendAnother');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    if (!name || !email) return;
-
-    // Submit to Netlify Forms
-    const formData = new FormData(form);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    })
-    .then(() => {
-      form.style.display = 'none';
-      successState.classList.add('show');
-    })
-    .catch(() => {
-      // Even if offline, show success so user isn't stuck; submission still queues on Netlify
-      form.style.display = 'none';
-      successState.classList.add('show');
-    });
-  });
-
-  // Let them send another
-  sendAnother.addEventListener('click', () => {
-    form.reset();
-    select.classList.remove('has-value');
-    successState.classList.remove('show');
-    form.style.display = 'flex';
   });
 </script>
 </body>
