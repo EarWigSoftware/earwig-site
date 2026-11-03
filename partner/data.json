@@ -1,0 +1,152 @@
+{
+ "latest": {
+  "updatedAt": "2026-11-03T08:52:00Z",
+  "summary": {
+   "views": 509,
+   "likes": 14,
+   "comments": 2,
+   "engagementRate": 3.14,
+   "posts": 6,
+   "scheduled": 9
+  },
+  "channels": [
+   {
+    "service": "instagram",
+    "handle": "playstave",
+    "posts": 4,
+    "views": 254,
+    "likes": 9,
+    "comments": 2
+   },
+   {
+    "service": "tiktok",
+    "handle": "stave9246",
+    "posts": 1,
+    "views": 1,
+    "likes": 1,
+    "comments": 0
+   },
+   {
+    "service": "youtube",
+    "handle": "Stave",
+    "posts": 1,
+    "views": 254,
+    "likes": 4,
+    "comments": 0
+   }
+  ],
+  "topPosts": [
+   {
+    "service": "youtube",
+    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
+    "views": 254,
+    "likes": 4,
+    "comments": 0,
+    "sentAt": "2026-11-02T19:05:21Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
+    "views": 214,
+    "likes": 5,
+    "comments": 2,
+    "sentAt": "2026-11-02T19:06:57Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
+    "views": 1,
+    "likes": 1,
+    "comments": 0,
+    "sentAt": "2026-11-02T19:07:00Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "For music teachers: record the piece once in the lesson, check it against your ears, and send your student the tab or the notation as a PDF.",
+    "views": 19,
+    "likes": 2,
+    "comments": 0,
+    "sentAt": "2026-10-14T19:09:26Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "Stave listens to a recording and writes out what was played: tab, chords and notes, in time with it.",
+    "views": 12,
+    "likes": 1,
+    "comments": 0,
+    "sentAt": "2026-10-14T19:18:47Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "Stave is coming to the App Store and Google Play.",
+    "views": 9,
+    "likes": 1,
+    "comments": 0,
+    "sentAt": "2026-10-14T19:13:16Z"
+   }
+  ],
+  "upcoming": [
+   {
+    "service": "instagram",
+    "caption": "Stave is out now on the App Store.",
+    "dueAt": "2026-11-03T18:30:00Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "Stave is out now on the App Store.",
+    "dueAt": "2026-11-03T18:30:00Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "Stave is out now on the App Store.",
+    "dueAt": "2026-11-03T18:30:00Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "dueAt": "2026-11-04T18:30:00Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "dueAt": "2026-11-04T18:30:00Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "dueAt": "2026-11-04T18:30:00Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "Found a song with no tab? Swipe for how Stave writes it for you.",
+    "dueAt": "2026-11-05T12:30:00Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "Played once.",
+    "dueAt": "2026-11-05T18:30:00Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "Played once.",
+    "dueAt": "2026-11-05T18:30:00Z"
+   }
+  ]
+ },
+ "history": [
+  {
+   "date": "2026-11-02",
+   "totalViews": 40,
+   "totalLikes": 4,
+   "totalComments": 0,
+   "postsSent": 6
+  },
+  {
+   "date": "2026-11-03",
+   "totalViews": 509,
+   "totalLikes": 14,
+   "totalComments": 2,
+   "postsSent": 6
+  }
+ ]
+}
