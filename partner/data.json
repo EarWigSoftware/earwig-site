@@ -1,106 +1,109 @@
 {
  "latest": {
-  "updatedAt": "2026-11-03T08:52:00Z",
+  "updatedAt": "2026-11-04T09:03:00Z",
   "summary": {
-   "views": 509,
-   "likes": 14,
-   "comments": 2,
-   "engagementRate": 3.14,
-   "posts": 6,
-   "scheduled": 9
+   "views": 21833,
+   "likes": 79,
+   "comments": 4,
+   "engagementRate": 0.38,
+   "posts": 9,
+   "scheduled": 8
   },
   "channels": [
    {
     "service": "instagram",
     "handle": "playstave",
-    "posts": 4,
-    "views": 254,
-    "likes": 9,
-    "comments": 2
+    "posts": 5,
+    "views": 3229,
+    "likes": 51,
+    "comments": 4
    },
    {
     "service": "tiktok",
     "handle": "stave9246",
-    "posts": 1,
-    "views": 1,
-    "likes": 1,
+    "posts": 2,
+    "views": 17731,
+    "likes": 19,
     "comments": 0
    },
    {
     "service": "youtube",
     "handle": "Stave",
-    "posts": 1,
-    "views": 254,
-    "likes": 4,
+    "posts": 2,
+    "views": 875,
+    "likes": 9,
     "comments": 0
    }
   ],
   "topPosts": [
    {
-    "service": "youtube",
-    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
-    "views": 254,
-    "likes": 4,
-    "comments": 0,
-    "sentAt": "2026-11-02T19:05:21Z"
+    "service": "instagram",
+    "caption": "Stave is out now on the App Store.",
+    "pending": true,
+    "sentAt": "2026-11-03T18:33:21Z"
    },
    {
-    "service": "instagram",
-    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
-    "views": 214,
-    "likes": 5,
-    "comments": 2,
-    "sentAt": "2026-11-02T19:06:57Z"
+    "service": "tiktok",
+    "caption": "Stave is out now on the App Store.",
+    "pending": true,
+    "sentAt": "2026-11-03T18:33:09Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "Stave is out now on the App Store.",
+    "pending": true,
+    "sentAt": "2026-11-03T18:32:04Z"
    },
    {
     "service": "tiktok",
     "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
-    "views": 1,
+    "views": 2,
     "likes": 1,
     "comments": 0,
     "sentAt": "2026-11-02T19:07:00Z"
    },
    {
     "service": "instagram",
-    "caption": "For music teachers: record the piece once in the lesson, check it against your ears, and send your student the tab or the notation as a PDF.",
-    "views": 19,
-    "likes": 2,
+    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
+    "views": 498,
+    "likes": 12,
+    "comments": 4,
+    "sentAt": "2026-11-02T19:06:57Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
+    "views": 709,
+    "likes": 9,
     "comments": 0,
-    "sentAt": "2026-10-14T19:09:26Z"
+    "sentAt": "2026-11-02T19:05:21Z"
    },
    {
     "service": "instagram",
     "caption": "Stave listens to a recording and writes out what was played: tab, chords and notes, in time with it.",
-    "views": 12,
-    "likes": 1,
+    "views": 2203,
+    "likes": 25,
     "comments": 0,
     "sentAt": "2026-10-14T19:18:47Z"
    },
    {
     "service": "instagram",
     "caption": "Stave is coming to the App Store and Google Play.",
-    "views": 9,
-    "likes": 1,
+    "views": 168,
+    "likes": 2,
     "comments": 0,
     "sentAt": "2026-10-14T19:13:16Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "For music teachers: record the piece once in the lesson, check it against your ears, and send your student the tab or the notation as a PDF.",
+    "views": 103,
+    "likes": 4,
+    "comments": 0,
+    "sentAt": "2026-10-14T19:09:26Z"
    }
   ],
   "upcoming": [
-   {
-    "service": "instagram",
-    "caption": "Stave is out now on the App Store.",
-    "dueAt": "2026-11-03T18:30:00Z"
-   },
-   {
-    "service": "tiktok",
-    "caption": "Stave is out now on the App Store.",
-    "dueAt": "2026-11-03T18:30:00Z"
-   },
-   {
-    "service": "youtube",
-    "caption": "Stave is out now on the App Store.",
-    "dueAt": "2026-11-03T18:30:00Z"
-   },
    {
     "service": "instagram",
     "caption": "No tab for it anywhere? Record it and Stave writes it out.",
@@ -130,6 +133,16 @@
     "service": "youtube",
     "caption": "Played once.",
     "dueAt": "2026-11-05T18:30:00Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "Played once.",
+    "dueAt": "2026-11-06T18:30:00Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "dueAt": "2026-11-06T18:30:00Z"
    }
   ]
  },
@@ -147,6 +160,13 @@
    "totalLikes": 14,
    "totalComments": 2,
    "postsSent": 6
+  },
+  {
+   "date": "2026-11-04",
+   "totalViews": 21833,
+   "totalLikes": 79,
+   "totalComments": 4,
+   "postsSent": 9
   }
  ]
 }
