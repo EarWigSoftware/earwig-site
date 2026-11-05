@@ -1,57 +1,81 @@
 {
  "latest": {
-  "updatedAt": "2026-11-04T09:03:00Z",
+  "updatedAt": "2026-11-05T09:02:00Z",
   "summary": {
-   "views": 21833,
-   "likes": 79,
+   "views": 25778,
+   "likes": 108,
    "comments": 4,
-   "engagementRate": 0.38,
-   "posts": 9,
-   "scheduled": 8
+   "engagementRate": 0.43,
+   "posts": 12,
+   "scheduled": 6
   },
   "channels": [
    {
     "service": "instagram",
     "handle": "playstave",
-    "posts": 5,
-    "views": 3229,
-    "likes": 51,
+    "posts": 6,
+    "views": 3738,
+    "likes": 61,
     "comments": 4
    },
    {
     "service": "tiktok",
     "handle": "stave9246",
-    "posts": 2,
-    "views": 17731,
-    "likes": 19,
+    "posts": 3,
+    "views": 20472,
+    "likes": 29,
     "comments": 0
    },
    {
     "service": "youtube",
     "handle": "Stave",
-    "posts": 2,
-    "views": 875,
-    "likes": 9,
+    "posts": 3,
+    "views": 1568,
+    "likes": 18,
     "comments": 0
    }
   ],
   "topPosts": [
    {
+    "service": "tiktok",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "pending": true,
+    "sentAt": "2026-11-04T18:34:04Z"
+   },
+   {
+    "service": "instagram",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "pending": true,
+    "sentAt": "2026-11-04T18:33:10Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
+    "pending": true,
+    "sentAt": "2026-11-04T18:31:50Z"
+   },
+   {
     "service": "instagram",
     "caption": "Stave is out now on the App Store.",
-    "pending": true,
+    "views": 337,
+    "likes": 8,
+    "comments": 0,
     "sentAt": "2026-11-03T18:33:21Z"
    },
    {
     "service": "tiktok",
     "caption": "Stave is out now on the App Store.",
-    "pending": true,
+    "views": 20198,
+    "likes": 22,
+    "comments": 0,
     "sentAt": "2026-11-03T18:33:09Z"
    },
    {
     "service": "youtube",
     "caption": "Stave is out now on the App Store.",
-    "pending": true,
+    "views": 226,
+    "likes": 0,
+    "comments": 0,
     "sentAt": "2026-11-03T18:32:04Z"
    },
    {
@@ -65,23 +89,23 @@
    {
     "service": "instagram",
     "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
-    "views": 498,
-    "likes": 12,
+    "views": 711,
+    "likes": 14,
     "comments": 4,
     "sentAt": "2026-11-02T19:06:57Z"
    },
    {
     "service": "youtube",
     "caption": "Welcome to Stave. Bring a recording and it writes out the tab, in time with the playing.",
-    "views": 709,
-    "likes": 9,
+    "views": 798,
+    "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-02T19:05:21Z"
    },
    {
     "service": "instagram",
     "caption": "Stave listens to a recording and writes out what was played: tab, chords and notes, in time with it.",
-    "views": 2203,
+    "views": 2295,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-10-14T19:18:47Z"
@@ -89,7 +113,7 @@
    {
     "service": "instagram",
     "caption": "Stave is coming to the App Store and Google Play.",
-    "views": 168,
+    "views": 176,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-10-14T19:13:16Z"
@@ -97,28 +121,13 @@
    {
     "service": "instagram",
     "caption": "For music teachers: record the piece once in the lesson, check it against your ears, and send your student the tab or the notation as a PDF.",
-    "views": 103,
+    "views": 112,
     "likes": 4,
     "comments": 0,
     "sentAt": "2026-10-14T19:09:26Z"
    }
   ],
   "upcoming": [
-   {
-    "service": "instagram",
-    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
-    "dueAt": "2026-11-04T18:30:00Z"
-   },
-   {
-    "service": "tiktok",
-    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
-    "dueAt": "2026-11-04T18:30:00Z"
-   },
-   {
-    "service": "youtube",
-    "caption": "No tab for it anywhere? Record it and Stave writes it out.",
-    "dueAt": "2026-11-04T18:30:00Z"
-   },
    {
     "service": "instagram",
     "caption": "Found a song with no tab? Swipe for how Stave writes it for you.",
@@ -143,6 +152,11 @@
     "service": "tiktok",
     "caption": "No tab for it anywhere? Record it and Stave writes it out.",
     "dueAt": "2026-11-06T18:30:00Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "Played once.",
+    "dueAt": "2026-11-07T12:30:00Z"
    }
   ]
  },
@@ -167,6 +181,13 @@
    "totalLikes": 79,
    "totalComments": 4,
    "postsSent": 9
+  },
+  {
+   "date": "2026-11-05",
+   "totalViews": 25778,
+   "totalLikes": 108,
+   "totalComments": 4,
+   "postsSent": 12
   }
  ]
 }
