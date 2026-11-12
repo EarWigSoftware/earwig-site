@@ -1,63 +1,87 @@
 {
  "latest": {
-  "updatedAt": "2026-11-11T08:52:00Z",
+  "updatedAt": "2026-11-12T08:52:00Z",
   "summary": {
-   "views": 36714,
-   "likes": 283,
+   "views": 37390,
+   "likes": 294,
    "comments": 6,
-   "engagementRate": 0.79,
-   "posts": 24,
-   "scheduled": 10
+   "engagementRate": 0.8,
+   "posts": 27,
+   "scheduled": 7
   },
   "channels": [
    {
     "service": "instagram",
     "handle": "playstave",
-    "posts": 10,
-    "views": 7411,
-    "likes": 114,
+    "posts": 11,
+    "views": 7614,
+    "likes": 120,
     "comments": 4
    },
    {
     "service": "tiktok",
     "handle": "stave9246",
-    "posts": 7,
-    "views": 23894,
-    "likes": 109,
+    "posts": 8,
+    "views": 23967,
+    "likes": 111,
     "comments": 0
    },
    {
     "service": "youtube",
     "handle": "Stave",
-    "posts": 7,
-    "views": 5409,
-    "likes": 60,
+    "posts": 8,
+    "views": 5809,
+    "likes": 63,
     "comments": 2
    }
   ],
   "topPosts": [
    {
+    "service": "instagram",
+    "caption": "Played once.",
+    "pending": true,
+    "sentAt": "2026-11-11T18:34:14Z"
+   },
+   {
+    "service": "tiktok",
+    "caption": "Played once.",
+    "pending": true,
+    "sentAt": "2026-11-11T18:34:02Z"
+   },
+   {
+    "service": "youtube",
+    "caption": "Played once.",
+    "pending": true,
+    "sentAt": "2026-11-11T18:32:16Z"
+   },
+   {
     "service": "tiktok",
     "caption": "Played it once.",
-    "pending": true,
+    "views": 724,
+    "likes": 14,
+    "comments": 0,
     "sentAt": "2026-11-10T18:33:03Z"
    },
    {
     "service": "instagram",
     "caption": "Played it once.",
-    "pending": true,
+    "views": 199,
+    "likes": 6,
+    "comments": 0,
     "sentAt": "2026-11-10T18:32:57Z"
    },
    {
     "service": "youtube",
     "caption": "Played it once.",
-    "pending": true,
+    "views": 403,
+    "likes": 3,
+    "comments": 0,
     "sentAt": "2026-11-10T18:31:09Z"
    },
    {
     "service": "instagram",
     "caption": "One take on my upright last night, recorded on my phone and run through Stave.",
-    "views": 1122,
+    "views": 1124,
     "likes": 18,
     "comments": 0,
     "sentAt": "2026-11-07T18:31:29Z"
@@ -65,7 +89,7 @@
    {
     "service": "tiktok",
     "caption": "One take on my upright last night, recorded on my phone and run through Stave.",
-    "views": 749,
+    "views": 754,
     "likes": 34,
     "comments": 0,
     "sentAt": "2026-11-07T18:31:20Z"
@@ -73,7 +97,7 @@
    {
     "service": "youtube",
     "caption": "One take on my upright last night, recorded on my phone and run through Stave.",
-    "views": 1161,
+    "views": 1159,
     "likes": 16,
     "comments": 2,
     "sentAt": "2026-11-07T18:30:20Z"
@@ -81,7 +105,7 @@
    {
     "service": "tiktok",
     "caption": "How do you play this?",
-    "views": 729,
+    "views": 734,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-06T18:32:24Z"
@@ -89,7 +113,7 @@
    {
     "service": "instagram",
     "caption": "How do you play this?",
-    "views": 1692,
+    "views": 1693,
     "likes": 18,
     "comments": 0,
     "sentAt": "2026-11-06T18:31:45Z"
@@ -97,7 +121,7 @@
    {
     "service": "youtube",
     "caption": "How do you play this?",
-    "views": 1226,
+    "views": 1224,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-06T18:30:53Z"
@@ -105,7 +129,7 @@
    {
     "service": "tiktok",
     "caption": "Clair de Lune on my upright, recorded on my phone.",
-    "views": 739,
+    "views": 742,
     "likes": 16,
     "comments": 0,
     "sentAt": "2026-11-05T18:33:01Z"
@@ -113,7 +137,7 @@
    {
     "service": "instagram",
     "caption": "Clair de Lune on my upright, recorded on my phone.",
-    "views": 477,
+    "views": 478,
     "likes": 12,
     "comments": 0,
     "sentAt": "2026-11-05T18:31:51Z"
@@ -121,7 +145,7 @@
    {
     "service": "youtube",
     "caption": "Clair de Lune on my upright, recorded on my phone and run through Stave.",
-    "views": 658,
+    "views": 659,
     "likes": 9,
     "comments": 0,
     "sentAt": "2026-11-05T18:31:18Z"
@@ -129,7 +153,7 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 747,
+    "views": 750,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-04T18:34:04Z"
@@ -161,7 +185,7 @@
    {
     "service": "tiktok",
     "caption": "Stave is out now on the App Store.",
-    "views": 20240,
+    "views": 20253,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-11-03T18:33:09Z"
@@ -177,7 +201,7 @@
    {
     "service": "tiktok",
     "caption": "Welcome to Stave.",
-    "views": 8,
+    "views": 10,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-02T19:06:59Z"
@@ -224,21 +248,6 @@
    }
   ],
   "upcoming": [
-   {
-    "service": "youtube",
-    "caption": "Played once.",
-    "dueAt": "2026-11-11T18:30:00Z"
-   },
-   {
-    "service": "instagram",
-    "caption": "Played once.",
-    "dueAt": "2026-11-11T18:30:00Z"
-   },
-   {
-    "service": "tiktok",
-    "caption": "Played once.",
-    "dueAt": "2026-11-11T18:30:00Z"
-   },
    {
     "service": "youtube",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
@@ -346,6 +355,13 @@
    "totalLikes": 283,
    "totalComments": 6,
    "postsSent": 24
+  },
+  {
+   "date": "2026-11-12",
+   "totalViews": 37390,
+   "totalLikes": 294,
+   "totalComments": 6,
+   "postsSent": 27
   }
  ]
 }
