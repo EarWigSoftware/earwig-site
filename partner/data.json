@@ -1,9 +1,9 @@
 {
  "latest": {
-  "updatedAt": "2026-11-16T08:53:00Z",
+  "updatedAt": "2026-11-17T08:52:00Z",
   "summary": {
-   "views": 38811,
-   "likes": 316,
+   "views": 38858,
+   "likes": 318,
    "comments": 6,
    "engagementRate": 0.83,
    "posts": 31,
@@ -14,7 +14,7 @@
     "service": "instagram",
     "handle": "playstave",
     "posts": 13,
-    "views": 8286,
+    "views": 8294,
     "likes": 137,
     "comments": 4
    },
@@ -22,15 +22,15 @@
     "service": "tiktok",
     "handle": "stave9246",
     "posts": 11,
-    "views": 27002,
-    "likes": 144,
+    "views": 27035,
+    "likes": 146,
     "comments": 0
    },
    {
     "service": "youtube",
     "handle": "Stave",
     "posts": 10,
-    "views": 6193,
+    "views": 6199,
     "likes": 66,
     "comments": 2
    }
@@ -39,8 +39,8 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 750,
-    "likes": 10,
+    "views": 759,
+    "likes": 12,
     "comments": 0,
     "sentAt": "2026-11-14T18:33:15Z"
    },
@@ -55,7 +55,7 @@
    {
     "service": "instagram",
     "caption": "Too fast to follow?",
-    "views": 202,
+    "views": 208,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-13T18:32:57Z"
@@ -63,7 +63,7 @@
    {
     "service": "youtube",
     "caption": "Too fast to follow?",
-    "views": 247,
+    "views": 252,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-13T18:31:17Z"
@@ -71,7 +71,7 @@
    {
     "service": "tiktok",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 755,
+    "views": 765,
     "likes": 6,
     "comments": 0,
     "sentAt": "2026-11-12T18:33:40Z"
@@ -79,7 +79,7 @@
    {
     "service": "instagram",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 195,
+    "views": 197,
     "likes": 3,
     "comments": 0,
     "sentAt": "2026-11-12T18:33:25Z"
@@ -87,7 +87,7 @@
    {
     "service": "youtube",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 48,
+    "views": 47,
     "likes": 1,
     "comments": 0,
     "sentAt": "2026-11-12T18:31:51Z"
@@ -119,7 +119,7 @@
    {
     "service": "tiktok",
     "caption": "Played it once.",
-    "views": 757,
+    "views": 760,
     "likes": 14,
     "comments": 0,
     "sentAt": "2026-11-10T18:33:03Z"
@@ -135,7 +135,7 @@
    {
     "service": "youtube",
     "caption": "Played it once.",
-    "views": 467,
+    "views": 469,
     "likes": 3,
     "comments": 0,
     "sentAt": "2026-11-10T18:31:09Z"
@@ -167,7 +167,7 @@
    {
     "service": "tiktok",
     "caption": "How do you play this?",
-    "views": 739,
+    "views": 743,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-06T18:32:24Z"
@@ -191,7 +191,7 @@
    {
     "service": "tiktok",
     "caption": "Clair de Lune on my upright, recorded on my phone.",
-    "views": 751,
+    "views": 752,
     "likes": 16,
     "comments": 0,
     "sentAt": "2026-11-05T18:33:01Z"
@@ -215,7 +215,7 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 761,
+    "views": 764,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-04T18:34:04Z"
@@ -247,7 +247,7 @@
    {
     "service": "tiktok",
     "caption": "Stave is out now on the App Store.",
-    "views": 20288,
+    "views": 20291,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-11-03T18:33:09Z"
@@ -414,6 +414,13 @@
    "date": "2026-11-16",
    "totalViews": 41481,
    "totalLikes": 347,
+   "totalComments": 6,
+   "postsSent": 34
+  },
+  {
+   "date": "2026-11-17",
+   "totalViews": 41528,
+   "totalLikes": 349,
    "totalComments": 6,
    "postsSent": 34
   }
