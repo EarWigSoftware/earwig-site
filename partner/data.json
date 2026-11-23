@@ -1,8 +1,8 @@
 {
  "latest": {
-  "updatedAt": "2026-11-22T08:52:00Z",
+  "updatedAt": "2026-11-23T08:52:00Z",
   "summary": {
-   "views": 38924,
+   "views": 38948,
    "likes": 320,
    "comments": 6,
    "engagementRate": 0.84,
@@ -14,7 +14,7 @@
     "service": "instagram",
     "handle": "playstave",
     "posts": 13,
-    "views": 8300,
+    "views": 8316,
     "likes": 138,
     "comments": 4
    },
@@ -22,7 +22,7 @@
     "service": "tiktok",
     "handle": "stave9246",
     "posts": 11,
-    "views": 27085,
+    "views": 27092,
     "likes": 147,
     "comments": 0
    },
@@ -30,7 +30,7 @@
     "service": "youtube",
     "handle": "Stave",
     "posts": 10,
-    "views": 6209,
+    "views": 6210,
     "likes": 66,
     "comments": 2
    }
@@ -39,7 +39,7 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 773,
+    "views": 775,
     "likes": 13,
     "comments": 0,
     "sentAt": "2026-11-14T18:33:15Z"
@@ -47,7 +47,7 @@
    {
     "service": "tiktok",
     "caption": "Too fast to follow?",
-    "views": 716,
+    "views": 717,
     "likes": 11,
     "comments": 0,
     "sentAt": "2026-11-13T18:32:58Z"
@@ -55,7 +55,7 @@
    {
     "service": "instagram",
     "caption": "Too fast to follow?",
-    "views": 209,
+    "views": 212,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-13T18:32:57Z"
@@ -63,7 +63,7 @@
    {
     "service": "youtube",
     "caption": "Too fast to follow?",
-    "views": 254,
+    "views": 255,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-13T18:31:17Z"
@@ -79,7 +79,7 @@
    {
     "service": "instagram",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 198,
+    "views": 199,
     "likes": 4,
     "comments": 0,
     "sentAt": "2026-11-12T18:33:25Z"
@@ -95,7 +95,7 @@
    {
     "service": "instagram",
     "caption": "Played once.",
-    "views": 230,
+    "views": 232,
     "likes": 11,
     "comments": 0,
     "sentAt": "2026-11-11T18:34:14Z"
@@ -127,7 +127,7 @@
    {
     "service": "instagram",
     "caption": "Played it once.",
-    "views": 215,
+    "views": 216,
     "likes": 7,
     "comments": 0,
     "sentAt": "2026-11-10T18:32:57Z"
@@ -143,7 +143,7 @@
    {
     "service": "instagram",
     "caption": "One take on my upright last night, recorded on my phone and run through Stave.",
-    "views": 1133,
+    "views": 1134,
     "likes": 18,
     "comments": 0,
     "sentAt": "2026-11-07T18:31:29Z"
@@ -175,7 +175,7 @@
    {
     "service": "instagram",
     "caption": "How do you play this?",
-    "views": 1699,
+    "views": 1700,
     "likes": 18,
     "comments": 0,
     "sentAt": "2026-11-06T18:31:45Z"
@@ -199,7 +199,7 @@
    {
     "service": "instagram",
     "caption": "Clair de Lune on my upright, recorded on my phone.",
-    "views": 479,
+    "views": 480,
     "likes": 12,
     "comments": 0,
     "sentAt": "2026-11-05T18:31:51Z"
@@ -215,7 +215,7 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 768,
+    "views": 769,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-04T18:34:04Z"
@@ -223,7 +223,7 @@
    {
     "service": "instagram",
     "caption": "No tab for it anywhere?",
-    "views": 275,
+    "views": 277,
     "likes": 13,
     "comments": 0,
     "sentAt": "2026-11-04T18:33:10Z"
@@ -239,7 +239,7 @@
    {
     "service": "instagram",
     "caption": "Stave is out now on the App Store.",
-    "views": 409,
+    "views": 411,
     "likes": 8,
     "comments": 0,
     "sentAt": "2026-11-03T18:33:21Z"
@@ -247,7 +247,7 @@
    {
     "service": "tiktok",
     "caption": "Stave is out now on the App Store.",
-    "views": 20301,
+    "views": 20304,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-11-03T18:33:09Z"
@@ -271,7 +271,7 @@
    {
     "service": "instagram",
     "caption": "Welcome to Stave.",
-    "views": 783,
+    "views": 785,
     "likes": 14,
     "comments": 4,
     "sentAt": "2026-11-02T19:06:57Z"
@@ -455,6 +455,13 @@
   {
    "date": "2026-11-22",
    "totalViews": 41594,
+   "totalLikes": 351,
+   "totalComments": 6,
+   "postsSent": 34
+  },
+  {
+   "date": "2026-11-23",
+   "totalViews": 41618,
    "totalLikes": 351,
    "totalComments": 6,
    "postsSent": 34
