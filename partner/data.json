@@ -1,28 +1,28 @@
 {
  "latest": {
-  "updatedAt": "2026-11-26T08:52:00Z",
+  "updatedAt": "2026-11-27T08:52:00Z",
   "summary": {
-   "views": 39002,
-   "likes": 320,
+   "views": 39920,
+   "likes": 331,
    "comments": 6,
    "engagementRate": 0.84,
-   "posts": 31,
-   "scheduled": 3
+   "posts": 32,
+   "scheduled": 2
   },
   "channels": [
    {
     "service": "instagram",
     "handle": "playstave",
-    "posts": 13,
-    "views": 8318,
-    "likes": 138,
+    "posts": 14,
+    "views": 9212,
+    "likes": 149,
     "comments": 4
    },
    {
     "service": "tiktok",
     "handle": "stave9246",
     "posts": 11,
-    "views": 27146,
+    "views": 27170,
     "likes": 147,
     "comments": 0
    },
@@ -30,16 +30,22 @@
     "service": "youtube",
     "handle": "Stave",
     "posts": 10,
-    "views": 6210,
+    "views": 6213,
     "likes": 66,
     "comments": 2
    }
   ],
   "topPosts": [
    {
+    "service": "instagram",
+    "caption": "How do you play this?",
+    "pending": true,
+    "sentAt": "2026-11-26T18:32:59Z"
+   },
+   {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 786,
+    "views": 792,
     "likes": 13,
     "comments": 0,
     "sentAt": "2026-11-14T18:33:15Z"
@@ -47,7 +53,7 @@
    {
     "service": "tiktok",
     "caption": "Too fast to follow?",
-    "views": 722,
+    "views": 726,
     "likes": 11,
     "comments": 0,
     "sentAt": "2026-11-13T18:32:58Z"
@@ -55,7 +61,7 @@
    {
     "service": "instagram",
     "caption": "Too fast to follow?",
-    "views": 212,
+    "views": 213,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-13T18:32:57Z"
@@ -71,7 +77,7 @@
    {
     "service": "tiktok",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 772,
+    "views": 774,
     "likes": 6,
     "comments": 0,
     "sentAt": "2026-11-12T18:33:40Z"
@@ -79,7 +85,7 @@
    {
     "service": "instagram",
     "caption": "The opening of Clair de Lune at half speed in Stave.",
-    "views": 199,
+    "views": 200,
     "likes": 4,
     "comments": 0,
     "sentAt": "2026-11-12T18:33:25Z"
@@ -95,7 +101,7 @@
    {
     "service": "instagram",
     "caption": "Played once.",
-    "views": 232,
+    "views": 233,
     "likes": 11,
     "comments": 0,
     "sentAt": "2026-11-11T18:34:14Z"
@@ -103,7 +109,7 @@
    {
     "service": "tiktok",
     "caption": "Played once.",
-    "views": 704,
+    "views": 705,
     "likes": 6,
     "comments": 0,
     "sentAt": "2026-11-11T18:34:02Z"
@@ -119,7 +125,7 @@
    {
     "service": "tiktok",
     "caption": "Played it once.",
-    "views": 772,
+    "views": 774,
     "likes": 14,
     "comments": 0,
     "sentAt": "2026-11-10T18:33:03Z"
@@ -151,7 +157,7 @@
    {
     "service": "tiktok",
     "caption": "One take on my upright last night, recorded on my phone and run through Stave.",
-    "views": 782,
+    "views": 783,
     "likes": 34,
     "comments": 0,
     "sentAt": "2026-11-07T18:31:20Z"
@@ -167,7 +173,7 @@
    {
     "service": "tiktok",
     "caption": "How do you play this?",
-    "views": 748,
+    "views": 749,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-06T18:32:24Z"
@@ -191,7 +197,7 @@
    {
     "service": "tiktok",
     "caption": "Clair de Lune on my upright, recorded on my phone.",
-    "views": 756,
+    "views": 757,
     "likes": 16,
     "comments": 0,
     "sentAt": "2026-11-05T18:33:01Z"
@@ -215,7 +221,7 @@
    {
     "service": "tiktok",
     "caption": "No tab for it anywhere?",
-    "views": 772,
+    "views": 774,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-04T18:34:04Z"
@@ -247,7 +253,7 @@
    {
     "service": "tiktok",
     "caption": "Stave is out now on the App Store.",
-    "views": 20317,
+    "views": 20320,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-11-03T18:33:09Z"
@@ -263,7 +269,7 @@
    {
     "service": "tiktok",
     "caption": "Welcome to Stave.",
-    "views": 15,
+    "views": 16,
     "likes": 2,
     "comments": 0,
     "sentAt": "2026-11-02T19:06:59Z"
@@ -271,7 +277,7 @@
    {
     "service": "instagram",
     "caption": "Welcome to Stave.",
-    "views": 785,
+    "views": 786,
     "likes": 14,
     "comments": 4,
     "sentAt": "2026-11-02T19:06:57Z"
@@ -279,7 +285,7 @@
    {
     "service": "youtube",
     "caption": "Welcome to Stave.",
-    "views": 804,
+    "views": 807,
     "likes": 10,
     "comments": 0,
     "sentAt": "2026-11-02T19:05:21Z"
@@ -287,7 +293,7 @@
    {
     "service": "instagram",
     "caption": "Stave listens to a recording and writes out what was played: tab, chords and notes, in time with it.",
-    "views": 2343,
+    "views": 2346,
     "likes": 25,
     "comments": 0,
     "sentAt": "2026-10-14T19:18:47Z"
@@ -310,11 +316,6 @@
    }
   ],
   "upcoming": [
-   {
-    "service": "instagram",
-    "caption": "How do you play this?",
-    "dueAt": "2026-11-26T18:30:00Z"
-   },
    {
     "service": "youtube",
     "caption": "Stuck working out the notes to a riff?",
@@ -502,6 +503,13 @@
    "totalLikes": 351,
    "totalComments": 6,
    "postsSent": 34
+  },
+  {
+   "date": "2026-11-27",
+   "totalViews": 42595,
+   "totalLikes": 362,
+   "totalComments": 6,
+   "postsSent": 35
   }
  ]
 }
